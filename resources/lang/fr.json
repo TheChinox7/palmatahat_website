@@ -1,0 +1,20 @@
+{
+    "Login": "Connexion",
+    "Email Address": "Adresse e-mail",
+    "Password": "Mot de passe",
+    "Remember Me": "Se souvenir de moi",
+    "Forgot Your Password?": "Mot de passe oublié ?",
+    "Reset Password": "Réinitialiser le mot de passe",
+    "Send Password Reset Link": "Envoyer le lien de réinitialisation",
+    "Confirm Password": "Confirmer le mot de passe",
+    "Register": "S'inscrire",
+    "Name": "Nom",
+    "Dashboard": "Tableau de bord",
+    "You are logged in!": "Vous êtes connecté !",
+    "Logout": "Déconnexion",
+    "Verify Your Email Address": "Vérifiez votre adresse e-mail",
+    "A fresh verification link has been sent to your email address.": "Un nouveau lien de vérification a été envoyé à votre adresse e-mail.",
+    "Before proceeding, please check your email for a verification link.": "Avant de continuer, veuillez vérifier votre e-mail pour un lien de vérification.",
+    "If you did not receive the email": "Si vous n'avez pas reçu l'e-mail",
+    "click here to request another": "cliquez ici pour en demander un autre"
+}
