@@ -1,61 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><strong>Palmatahat Website</strong></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Descripción**
+- Sitio web informativo y comercial para sombreros Panamá (Palmatahat).
+- Incluye páginas de bienvenida, catálogo (`shop`), contacto, y secciones sobre origen, historia y proceso.
+- Autenticación básica habilitada con `Auth::routes()` y un panel `home` para usuarios registrados.
 
-## About Laravel
+**Tecnologías**
+- Framework: `Laravel ^12` (PHP `^8.2`).
+- Frontend: Vite, Tailwind CSS (`^4`), Bootstrap, Axios.
+- UI de autenticación: `laravel/ui`.
+- Gestor de archivos: `alexusmai/laravel-file-manager`.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Estructura clave**
+- Rutas: `routes/web.php` (controladas por `WelcomeController`).
+- Vistas: `resources/views/` con páginas como `welcome`, `shop`, `contact`, `about`, `faq`, `montecristi`, entre otras.
+- Activos públicos: `public/css`, `public/js`, `public/img`.
+- Configuración: `config/app.php` (locale por defecto `fr`), `config/database.php`, `config/file-manager.php`.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Rutas principales**
+- `/` → `welcome`
+- `/shop` → `shop`
+- `/contact` → `contact`
+- `/about` → `about`
+- Submenús informativos:
+  - `/montecristi`, `/histoire`, `/bandes`, `/processus`, `/faq`, `/origine`, `/comment-commander`, `/art-porter-preserver`, `/histoire-palmatahat`, `/bandes-chapeaux`
+- Autenticación: `Auth::routes()` y `/home`
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Requisitos**
+- PHP `>= 8.2`, Composer.
+- Node.js y npm (para Vite y Tailwind).
+- MySQL/MariaDB (XAMPP o equivalente).
 
-## Learning Laravel
+**Instalación y puesta en marcha**
+- Clonar/copiar el proyecto en `htdocs` (XAMPP) o en cualquier carpeta.
+- Crear `.env` (se copia desde `.env.example` automáticamente por Composer en instalación):
+  - Ajustar `APP_URL` (por ejemplo `http://localhost` o el VirtualHost).
+  - Generar `APP_KEY` si no existe: `php artisan key:generate`.
+  - Configurar base de datos: `DB_HOST=127.0.0.1`, `DB_DATABASE=laravel`, `DB_USERNAME=root`, `DB_PASSWORD=` (vacío en XAMPP por defecto).
+- Instalar dependencias:
+  - Backend: `composer install`
+  - Frontend: `npm install`
+- Migraciones:
+  - `php artisan migrate` (se ejecuta automáticamente en `post-create-project-cmd` si aplica).
+- Desarrollo local (opciones):
+  - Opción A (todo en paralelo): `composer run dev`
+  - Opción B (separado): `php artisan serve` y `npm run dev`
+  - Con XAMPP/Apache: servir `public/` como DocumentRoot o acceder a `http://localhost/palmatahat_website/public`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Internacionalización**
+- `config/app.php` define `locale` y `fallback_locale` como `fr` por defecto.
+- Archivos de idioma en `resources/lang/fr`.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+**Pruebas**
+- Ejecutar tests: `composer run test` o `php artisan test`.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Scripts útiles (Composer)**
+- `dev`: levanta servidor (`php artisan serve`), cola, logs y Vite con `concurrently`.
+- `test`: limpia configuración y ejecuta suite de pruebas.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Licencia**
+- MIT (ver `LICENSE`).
