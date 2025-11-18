@@ -33,12 +33,12 @@
                             manière différente. C'est pourquoi, en tant que promoteurs du marché artisanal, nous
                             sommes fiers de montrer tout le processus que les artisans équatoriens réalisent pour
                             représenter les chapeaux Fedora classique et lo Montecristi en Suisse.</p>
-                    </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-tittle mb-60 text-center pt-10">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="section-tittle mb-60 text-center pt-10">
                         <h3>Matière première : la plante de paille toquilla</h3>
                         <p class="pera">
                             La paille toquilla provient d'une plante sauvage que l'on trouve à Montecristi, Manabi, dans un
@@ -46,52 +46,76 @@
                             1,5 à 3 mètres de haut ; on en extrait le tendre bourgeon intérieur des feuilles, idéal pour
                             l’élaboration du chapeau Panama.
                         </p>
-                        <div class="mt-5">
-                            <h3>Récolta responsable</h3>
-                            <p class="pera">
-                                Les artisans ne coupent pas la plante entière elle n'est pas déboisée, l'agriculteur extrait
-                                soigneusement les bourgeons appropriés, Sans nuire à la repousse naturelle.
-                            </p>
+                        <div class="content-section">
+                            <div class="content-image wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+                                <img src="{{ asset('img/palma/o2.jpg') }}" alt="Récolta responsable" class="img-fluid" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+                            </div>
+                            <div class="content-text wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">
+                                <h3>Récolta responsable</h3>
+                                <p class="pera">
+                                    Les artisans ne coupent pas la plante entière elle n'est pas déboisée, l'agriculteur extrait
+                                    soigneusement les bourgeons appropriés, Sans nuire à la repousse naturelle.
+                                </p>
+                            </div>
                         </div>
-                        <div class="mt-5">
-                            <h3>Sélection de la Fibre</h3>
-                            <p class="pera">
-                                La tige doit être séparée afin de récupérer le cœur, le centre du bourgeon à partir duquel
-                                les
-                                meilleurs fils et le plus fin seront sélectionnés. Cette sélection garantit la qualité et la
-                                finesse
-                                du tissage.
-                            </p>
+                        <div class="content-section reverse">
+                            <div class="content-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
+                                <h3>Sélection de la Fibre</h3>
+                                <p class="pera">
+                                    La tige doit être séparée afin de récupérer le cœur, le centre du bourgeon à partir duquel
+                                    les meilleurs fils et le plus fin seront sélectionnés. Cette sélection garantit la qualité et la
+                                    finesse du tissage.
+                                </p>
+                            </div>
+                            <div class="content-image wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">
+                                <img src="{{ asset('img/palma/o1.jpg') }}" alt="Sélection de la Fibre" class="img-fluid" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+                            </div>
                         </div>
-                        <div class="mt-5">
-                            <h3>Cuisson de la paille de toquilla</h3>
-                            <p class="pera">
-                                Une fois sélectionner les brins, dans un four à bois, vous nouez la paille de toquilla et
-                                vous
-                                la plongez dans de l'eau bouillante pendant 30 secondes, cela permet d’établisse la couleur
-                                beige de la fibre.
-                            </p>
+                        <div class="content-section">
+                            <div class="content-image wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+                                <video controls class="img-fluid" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+                                    <source src="{{ asset('img/palma/processus1.mp4') }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="content-text wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">
+                                <h3>Cuisson de la paille de toquilla</h3>
+                                <p class="pera">
+                                    Une fois sélectionner les brins, dans un four à bois, vous nouez la paille de toquilla et
+                                    vous la plongez dans de l'eau bouillante pendant 30 secondes, cela permet d’établisse la couleur
+                                    beige de la fibre.
+                                </p>
+                            </div>
                         </div>
-                        <div class="mt-5">
-                            <h3>Séchage au Soleil</h3>
-                            <p class="pera">
-                                Les fibres doivent sécher naturellement, au soleil, ce qui permet d’évacuer l’humidité,
-                                d’assouplir la matière, et de la rendre prête pour le tissage.
-                                Une fois que la fibre est sèche, elle est mise dans un four à bois, où elle est fumée au
-                                soufre
-                                pendant 12 heures pour blanchir un peu plus la paille de toquilla.
-                            </p>
+                        <div class="content-section reverse">
+                            <div class="content-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
+                                <h3>Séchage au Soleil</h3>
+                                <p class="pera">
+                                    Les fibres doivent sécher naturellement, au soleil, ce qui permet d’évacuer l’humidité,
+                                    d’assouplir la matière, et de la rendre prête pour le tissage.
+                                    Une fois que la fibre est sèche, elle est mise dans un four à bois, où elle est fumée au
+                                    soufre pendant 12 heures pour blanchir un peu plus la paille de toquilla.
+                                </p>
+                            </div>
+                            <div class="content-image wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">
+                                <img src="{{ asset('img/palma/o4.jpg') }}" alt="Séchage au Soleil" class="img-fluid" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+                            </div>
                         </div>
-                        <div class="mt-5">
-                            <h3>Le début de tissage la basse de chapeau </h3>
-                            <p class="pera">
-                                Tout commence par la création d'un gabarit à l'aide des 8 paires des brins des pailles
-                                La partie supérieure du chapeau connu par les artisans sous le nom de cangrejito
-                                armado marque le point de départ du tressage.
-                                Une fois cette base formée et les placer sur un petit support en bois le tissage du corps
-                                de chapeau peut commencer.
-                                Étape définition d'un chapeau Panama
-                            </p>
+                        <div class="content-section">
+                            <div class="content-image wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+                                <img src="{{ asset('img/palma/o5.jpg') }}" alt="Début de tissage" class="img-fluid" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+                            </div>
+                            <div class="content-text wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">
+                                <h3>Le début de tissage la basse de chapeau </h3>
+                                <p class="pera">
+                                    Tout commence par la création d'un gabarit à l'aide des 8 paires des brins des pailles
+                                    La partie supérieure du chapeau connu par les artisans sous le nom de cangrejito
+                                    armado marque le point de départ du tressage.
+                                    Une fois cette base formée et les placer sur un petit support en bois le tissage du corps
+                                    de chapeau peut commencer.
+                                    Étape définition d'un chapeau Panama
+                                </p>
+                            </div>
                         </div>
                         <div class="mt-5">
                             <h3>Fermeture de bord </h3>
@@ -167,74 +191,6 @@
                                 passion, acheter un chapeau Panama c'est acquérir une pièce unique symbole de
                                 culture d'élégance et d'engagement pour <strong>l'artisanat équatorien</strong>.
                             </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-tittle mb-60 text-center pt-10">
-                        <h2>Questions Fréquentes</h2>
-                    </div>
-                    <div class="accordion" id="faqAccordion">
-                        <div class="card">
-                            <div class="card-header" id="faq1">
-                                <h5 class="mb-0">
-                                    <a href="#collapse1" class="btn" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1" tabindex="0">
-                                        Comment connaître ma taille de chapeau ?
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="collapse1" class="collapse show" aria-labelledby="faq1" data-parent="#faqAccordion">
-                                <div class="card-body">
-                                    Comme pour tout vêtement, les chapeaux existent en différentes tailles. Pour déterminer la vôtre avec précision, placez un mètre à ruban fermement mais pas serré autour de votre tête, au milieu du front et au-dessus des oreilles. Cette mesure vous donnera la taille idéale de votre chapeau.<br>
-                                    {{-- <a href="{{ asset('downloads/metre.pdf') }}" class="btn" target="_blank" tabindex="0">Téléchargez un mètre de couturière ici</a>. --}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="faq2">
-                                <h5 class="mb-0">
-                                    <a href="#collapse2" class="btn collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" tabindex="0">
-                                        Comment identifier un vrai chapeau Panama ?
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="collapse2" class="collapse" aria-labelledby="faq2" data-parent="#faqAccordion">
-                                <div class="card-body">
-                                    Un véritable Panama s'identifie par la présence d’une rosace au sommet de la couronne, point de départ du tissage. Cette rosace peut varier selon la qualité, de 3 à 25 cercles pour les chapeaux haut de gamme, ce qui détermine leur authenticité.<br>
-                                    <img src="{{ asset('img/palma/about2.png') }}" alt="Rosace au sommet de la couronne" class="img-fluid mt-2">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="faq3">
-                                <h5 class="mb-0">
-                                    <a href="#collapse3" class="btn collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" tabindex="0">
-                                        Les panamas peuvent-ils se plier ?
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="collapse3" class="collapse" aria-labelledby="faq3" data-parent="#faqAccordion">
-                                <div class="card-body">
-                                    Les chapeaux de haute gamme peuvent se rouler mais il n'est pas recommandé de les plier, car ils peuvent perdre leur forme et leur structure.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="faq4">
-                                <h5 class="mb-0">
-                                    <a href="#collapse4" class="btn collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" tabindex="0">
-                                        Quelles sont les difficultés pour fabriquer un Panama ?
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="collapse4" class="collapse" aria-labelledby="faq4" data-parent="#faqAccordion">
-                                <div class="card-body">
-                                    La fabrication artisanale d’un véritable Panama est un savoir-faire exigeant, influencé par l'humidité, la chaleur, la pluie et l'exposition au soleil. Ces conditions affectent la souplesse de la paille et la régularité du tissage, rendant chaque chapeau unique et précieux.<br>
-                                    <img src="{{ asset('img/palma/about1.png') }}" alt="Sombrero en bote" class="img-fluid mt-2">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

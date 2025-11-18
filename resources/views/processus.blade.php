@@ -57,11 +57,6 @@
                     <div class="col-lg-10">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
-                                <div class="text-center mb-5">
-                                    <img src="{{ asset('img/palma/o2.jpg') }}"
-                                        alt="Processus de fabrication du chapeau Panama" class="img-fluid"
-                                        style="max-width: 600px; width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
-                                </div>
                                 <div class="text-center mb-5 mt-5">
                                     <video controls class="img-fluid"
                                         style="max-width: 600px; width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
@@ -69,6 +64,13 @@
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
+                                
+                                <div class="text-center mb-5">
+                                    <img src="{{ asset('img/palma/o2.jpg') }}"
+                                        alt="Processus de fabrication du chapeau Panama" class="img-fluid"
+                                        style="max-width: 600px; width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+                                </div>
+                                
                             </div>
                             <div class="col-lg-6">
                                 <div class="section-tittle mb-60 pt-10">

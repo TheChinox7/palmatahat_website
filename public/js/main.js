@@ -178,7 +178,7 @@
     }
 
  // Brand Active
- $('.brand-active').slick({
+  $('.brand-active').slick({
   dots: false,
   infinite: true,
   autoplay: true,
@@ -225,6 +225,47 @@
     // instead of a settings object
   ]
 });
+
+  var $categories = $('.categories-slider');
+  if ($categories.length) {
+    $categories.on('init', function (e, slick) {
+      var s = slick.options.slidesToShow;
+      var t = slick.slideCount;
+      $categories.toggleClass('has-more-right', s < t);
+      $categories.removeClass('has-more-left');
+    });
+    $categories.on('afterChange', function (e, slick, currentSlide) {
+      var s = slick.options.slidesToShow;
+      var t = slick.slideCount;
+      $categories.toggleClass('has-more-left', currentSlide > 0);
+      $categories.toggleClass('has-more-right', currentSlide + s < t);
+    });
+    $categories.slick({
+      dots: false,
+      infinite: false,
+      autoplay: false,
+      speed: 400,
+      arrows: false,
+      draggable: true,
+      swipe: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: { slidesToShow: 3, slidesToScroll: 1 }
+        },
+        {
+          breakpoint: 992,
+          settings: { slidesToShow: 2, slidesToScroll: 1 }
+        },
+        {
+          breakpoint: 576,
+          settings: { slidesToShow: 1, slidesToScroll: 1 }
+        }
+      ]
+    });
+  }
 
 /* 7. data-background */
     $("[data-background]").each(function () {
