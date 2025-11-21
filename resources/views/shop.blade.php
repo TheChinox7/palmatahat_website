@@ -82,71 +82,39 @@
                 <div class="col-xl-9 col-lg-9 col-md-8 ">
                     <div class="new-arrival new-arrival2">
                         <div class="row">
+                            @foreach($products as $product)
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-new-arrival mb-50 text-center">
                                     <div class="popular-img">
-                                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/18.a.Panama-Hat-Santa-Ana-1024x684.jpg" alt="Chapeau Cowboy">
+                                        <img src="{{ $product->image_path ? asset($product->image_path) : asset('img/palma/cats/cat2.svg') }}" alt="{{ $product->name }}">
                                         <div class="favorit-items">
                                             <img src="{{asset('img/gallery/favorit-card.png')}}" alt="">
                                         </div>
                                     </div>
                                     <div class="popular-caption">
-                                        <h3><a href="#">Chapeau Cowboy</a></h3>
-                                        <span>$ 450.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-new-arrival mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/18.a.Panama-Hat-Santa-Ana-1024x684.jpg" alt="Chapeau Fedora">
-                                        <div class="favorit-items">
-                                            <img src="{{asset('img/gallery/favorit-card.png')}}" alt="">
+                                        <h3><a href="#">{{ $product->name }}</a></h3>
+                                        <span>CHF {{ number_format($product->price,2) }}</span>
+                                        <div class="mt-2">
+                                            <button class="btn btn-sm btn-primary" onclick="addToCart({{ (int)$product->id }})">Ajouter au panier</button>
                                         </div>
                                     </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="#">Chapeau Fedora</a></h3>
-                                        <span>$ 600.00</span>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-new-arrival mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/18.a.Panama-Hat-Santa-Ana-1024x684.jpg" alt="Chapeau Panama">
-                                        <div class="favorit-items">
-                                            <img src="{{asset('img/gallery/favorit-card.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="#">Chapeau Panama</a></h3>
-                                        <span>$ 800.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-new-arrival mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/18.a.Panama-Hat-Santa-Ana-1024x684.jpg" alt="Chapeau Charro">
-                                        <div class="favorit-items">
-                                            <img src="{{asset('img/gallery/favorit-card.png')}}" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="#">Chapeau Charro</a></h3>
-                                        <span>$ 1200.00</span>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="room-btn mt-20">
-                                <a href="#" class="border-btn">Voir plus de chapeaux</a>
-                            </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center">{{ $products->links() }}</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function addToCart(pid) {
+            $.post("{{ route('cart.add') }}", { _token: '{{ csrf_token() }}', product_id: pid, quantity: 1 }, function (res) {
+                $('#cartCount').text(res.count);
+            });
+        }
+    </script>
 @endsection

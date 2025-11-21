@@ -17,7 +17,16 @@ class WelcomeController extends Controller
     }
     public function shop()
     {
-        return view('shop');
+        $query = \App\Models\Product::with('category')->orderByDesc('id');
+        $categorySlug = request('category');
+        if ($categorySlug) {
+            $category = \App\Models\Category::where('slug', $categorySlug)->first();
+            if ($category) {
+                $query->where('category_id', $category->id);
+            }
+        }
+        $products = $query->paginate(12);
+        return view('shop', compact('products'));
     }
     public function contact()
     {

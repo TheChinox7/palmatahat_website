@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\Route;
 // });
 
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController as UserOrderController;
+use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
+use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use Illuminate\Support\Facades\Auth;
 // Welcome routes
 Route::get('/', [WelcomeController::class, 'welcome'])->name('welcome');
@@ -46,3 +52,28 @@ Route::get('/bandes-chapeaux', [WelcomeController::class, 'bandesChapeaux'])->na
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Carrito
+Route::prefix('cart')->group(function () {
+    Route::get('/', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/add', [CartController::class, 'add'])->name('cart.add');
+    Route::post('/remove', [CartController::class, 'remove'])->name('cart.remove');
+    Route::post('/clear', [CartController::class, 'clear'])->name('cart.clear');
+});
+
+// Checkout
+Route::get('/checkout', [CheckoutController::class, 'show'])->name('checkout.show');
+Route::post('/checkout', [CheckoutController::class, 'process'])->name('checkout.process');
+
+// Órdenes del usuario
+Route::middleware('auth')->group(function () {
+    Route::get('/orders', [UserOrderController::class, 'index'])->name('orders.index');
+    Route::get('/orders/{order}', [UserOrderController::class, 'show'])->name('orders.show');
+});
+
+// Panel de administrador
+Route::middleware(['auth','admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::resource('categories', AdminCategoryController::class);
+    Route::resource('products', AdminProductController::class);
+    Route::resource('orders', AdminOrderController::class)->only(['index','show','edit','update','destroy']);
+});

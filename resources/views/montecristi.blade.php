@@ -27,7 +27,7 @@
                     <!-- Primera sección: Imagen y texto lado a lado -->
                     <div class="row align-items-center mb-5">
                         <div class="col-lg-6">
-                            <img src="{{ asset('img/palma/m1.jpg') }}" alt="Chapeau Montecristi" class="img-fluid"
+                            <img src="{{ asset('img/palma/m1.jpeg') }}" alt="Chapeau Montecristi" class="img-fluid"
                                  style="width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                         <div class="col-lg-6">
@@ -71,26 +71,18 @@
                                     </ul>
                                 </div>
                             </div>
+                            <p class="pera mt-4" style="color: #000;"><em>"L'Équateur le tisse aujourd'hui, le monde le
+                                        célèbre comme sien"</em></p>
                         </div>
                         <div class="col-lg-6">
                             <img src="{{ asset('img/palma/m2.jpg') }}" alt="Artisan travaillant" class="img-fluid"
                                  style="width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                     </div>
-
-                    <!-- Tercera sección: Razones para elegir -->
-                    <div class="row justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="section-tittle mb-60 text-center pt-10">
-                                <p class="pera mt-4" style="color: #000;"><em>"L'Équateur le tisse aujourd'hui, le monde le
-                                        célèbre comme sien"</em></p>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Fourth section: Two equal-sized images -->
                     <div class="row justify-content-center mb-5">
                         <div class="col-lg-6">
-                            <img src="{{ asset('img/palma/m3.jpg') }}" alt="Chapeau Montecristi" class="img-fluid"
+                            <img src="{{ asset('img/palma/m3.jpeg') }}" alt="Chapeau Montecristi" class="img-fluid"
                                  style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                         <div class="col-lg-6">

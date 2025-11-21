@@ -9,7 +9,7 @@
                         <ol class="breadcrumb justify-content-center" style="font-size: 1.6rem; color: black;">
                             <li class="breadcrumb-item"><a href="{{ route('welcome') }}" style="color: black;">Accueil</a>
                             </li>
-                            <li class="breadcrumb-item"><a style="color: black;">Origine du Chapeau Panama</a></li>
+                            <li class="breadcrumb-item"><a style="color: black;">Origine du Panama Haut</a></li>
                         </ol>
                     </nav>
                 </div>

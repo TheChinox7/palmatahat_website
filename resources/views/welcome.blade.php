@@ -1,29 +1,32 @@
 @extends('layouts.app')
 
 @section('slider')
-<div class="slider-active dot-style">
+<div class="slider-active">
     <!-- Single -->
-    <div class="single-slider hero-overly slider-height d-flex align-items-center position-relative">
+    <div class="single-slider hero-overly slider-height d-flex align-items-center position-relative w-100" style="width:100vw;">
         <video autoplay muted loop playsinline class="w-100 h-100 position-absolute"
             style="object-fit:cover; left:0; top:0; z-index:0;" preload="auto"
             poster="{{ asset('img/palma/slider-poster.jpg') }}">
-            <source src="{{ asset('img/palma/slider.mp4') }}" type="video/mp4">
+            <source src="{{ asset('img/palma/newslider.mp4') }}" type="video/mp4">
             Votre navigateur ne supporte pas la vidéo.
         </video>
-        <div class="position-absolute w-100 h-100" style="left:0; top:0; background:rgba(0,0,0,0.3); z-index:0.5;"></div>
-        <div class="container position-relative" style="z-index:1;">
-            <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-9">
-                    <!-- Hero Caption -->
-                    <div class="hero__caption text-white">
-                        <h1><br><br></h1>
-                        <a href="{{ route('shop') }}" class="btn">Achetez maintenant</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="position-absolute w-100 h-100" style="left:0; top:0; background:rgba(0,0,0,0.3); z-index:1;"></div>
     </div>
 </div>
+<style>
+    .slider-active .slick-dots,
+    .slider-active .owl-dots,
+    .slider-active .slick-arrow {
+        display: none !important;
+    }
+
+    .slider-active {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        overflow: hidden;
+    }
+</style>
 @endsection
 
 @section('content')
@@ -275,10 +278,11 @@
         </div>
     </div>
 </div>
-<section class="collection section-bg2 section-padding30 section-over1 ml-15 mr-15"
-    data-background="{{ asset('img/palma/section_bg01.jpg') }}">
+<section class="collection section-bg2 section-padding30 section-over1"
+    data-background="{{ asset('img/palma/section_bg01.jpg') }}"
+    style="width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);position:relative;overflow:hidden;">
     <div class="position-absolute w-100 h-100" style="left:0; top:0; background:rgba(0,0,0,0.3); z-index:0.5;"></div>
-    <div class="container-fluid"></div>
+
     <div class="row justify-content-center">
         <div class="col-xl-7 col-lg-9">
             <div class="single-question text-center">
@@ -287,7 +291,7 @@
             </div>
         </div>
     </div>
-    </div>
+
 </section>
 <div class="popular-product pt-50">
     <div class="container-fluid">
@@ -319,18 +323,59 @@
         </div>
     </div>
 </div>
-</div>
-</div>
-</div>
 <!-- Popular Locations End -->
 <!--? Services Area Start -->
-<div class="categories-area section-padding40 gray-bg">
+<style>
+    .categories-area {
+        background: #fff;
+        color: #000;
+        padding: 40px 0;
+    }
+
+    .categories-area .row {
+        gap: 0;
+    }
+
+    .categories-area .single-cat.feature-card {
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        text-align: center;
+        min-height: 112px;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .categories-area .single-cat.feature-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .categories-area .cat-icon img {
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
+    }
+
+    .categories-area .cat-cap h5 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+    }
+</style>
+<div class="categories-area section-padding40">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-cat mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                <div class="single-cat feature-card mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                     <div class="cat-icon">
-                        <img src="{{ asset('img/icon/services1.svg') }}" alt="" style="width: 50px; height: 50px; object-fit: contain;">
+                        <img src="{{ asset('img/icon/services1.svg') }}" alt="">
                     </div>
                     <div class="cat-cap">
                         <h5>Livraison en Toute Suisse</h5>
@@ -338,9 +383,9 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-cat mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                <div class="single-cat feature-card mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
                     <div class="cat-icon">
-                        <img src="{{ asset('img/icon/2.png') }}" alt="" style="width: 50px; height: 50px; object-fit: contain;">
+                        <img src="{{ asset('img/icon/2.png') }}" alt="">
                     </div>
                     <div class="cat-cap">
                         <h5>Fait par nos artisans</h5>
@@ -348,9 +393,9 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-cat mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                <div class="single-cat feature-card mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                     <div class="cat-icon">
-                        <img src="{{ asset('img/icon/3.png') }}" alt="" style="width: 50px; height: 50px; object-fit: contain;">
+                        <img src="{{ asset('img/icon/3.png') }}" alt="">
                     </div>
                     <div class="cat-cap">
                         <h5>Créez votre propre design</h5>
@@ -358,9 +403,9 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-cat wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                <div class="single-cat feature-card wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                     <div class="cat-icon">
-                        <img src="{{ asset('img/icon/4.png') }}" alt="" style="width: 50px; height: 50px; object-fit: contain;">
+                        <img src="{{ asset('img/icon/4.png') }}" alt="">
                     </div>
                     <div class="cat-cap">
                         <h5>Le luxe de l'exclusivité</h5>

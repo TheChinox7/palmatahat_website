@@ -124,11 +124,21 @@
                         <div class="col-lg-6">
                             <div class="section-tittle mb-60 pt-10">
                                 <p style="font-size: 1.6rem; text-align: justify; color: black;">
-                                    Consulter notre guide de tailles et qualité
-                                    Ajouter au panier et payer en toute sécurité
-                                    Rester avec votre chapeau directement chez vous
+                                    <strong>Découvrez l’élégance du véritable chapeau Panama en Suisse</strong><br>
+                                    <em>L’artisanat équatorien à votre portée</em>
                                     <br><br>
-                                    "Panama Montecristi L'élégance artisanale d'Équateur, livrée en Suisse."
+                                    Je suis <strong>Leticia</strong>, ambassadrice de l’artisanat équatorien en Suisse et fière originaire de l’Équateur. À travers <strong>Palmata Hat</strong>, je vous présente une sélection exclusive de <strong>chapeaux Panama</strong>, 100 % faits à la main par nos maîtres artisans, avec de la <strong>paille toquilla naturelle</strong>, reconnue dans le monde entier pour sa finesse et sa légèreté.
+                                    <br><br>
+                                    <strong>Pourquoi choisir nos chapeaux ?</strong>
+                                    <br>
+                                    • Faits à la main avec de la paille toquilla naturelle<br>
+                                    • Modèles barillet, standard et haut de gamme<br>
+                                    • Importateur direct – livraison rapide en Suisse (10 à 15 jours)
+                                    <br><br>
+                                    <strong>Le processus de fabrication</strong>
+                                    <br>
+                                    Découvrez, à travers notre vidéo exclusive, le savoir-faire ancestral transmis de génération en génération.
+                                    Chaque chapeau est tissé à la main en Équateur, puis façonné et fini avec soin avant d’arriver entre vos mains.
                                 </p>
                             </div>
                         </div>
