@@ -299,7 +299,9 @@
             product_id: pid,
             quantity: 1
         }, function(res) {
-            $('#cartCount').text(res.count);
+            if(window.updateCartCount){ window.updateCartCount(res.count); }
+            else { $('#cartCount').text(res.count); $('#cartCountMobileTab').text(res.count); }
+            if(window.refreshCart){ window.refreshCart(); }
         });
     }
     (function() {

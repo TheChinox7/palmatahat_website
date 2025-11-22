@@ -15,7 +15,16 @@ class CheckoutController extends Controller
         if (empty($cart)) {
             return redirect()->route('shop');
         }
-        return view('checkout', ['cart' => $cart]);
+        $attrIds = [];
+        foreach ($cart as $item) {
+            $attrs = $item['attributes'] ?? [];
+            foreach (array_keys($attrs) as $aid) {
+                $aid = (int) $aid;
+                if ($aid) $attrIds[$aid] = true;
+            }
+        }
+        $attrNames = \App\Models\Attribute::whereIn('id', array_keys($attrIds))->pluck('name','id')->toArray();
+        return view('checkout', ['cart' => $cart, 'attrNames' => $attrNames]);
     }
 
     public function process(Request $request)

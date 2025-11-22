@@ -125,6 +125,16 @@
             color: #cccccc !important;
         }
 
+        .btn-brand {
+            background: #7d716c;
+            color: #ffffff;
+            border: none;
+        }
+        .btn-brand:hover {
+            background: #6b605b;
+            color: #ffffff;
+        }
+
         .header-social a {
             color: #ffffff !important;
             margin-left: 12px;
@@ -484,7 +494,7 @@
                                                         style="background:none;border:none;font-size:24px;color:#7d716c;"
                                                         class="text-dark">&times;</button>
                                                 </div>
-                                                <div id="cartContent" style="padding:20px;flex:1;overflow-y:auto;"></div>
+                                                <div id="cartContent" style="flex:1;overflow-y:auto;"></div>
                                             </div>
                                         </li>
                                     </ul>
@@ -951,12 +961,12 @@
             <div class="slider-area">
                 <!-- Mobile cart offcanvas available globally for mobile -->
                 <div id="cartSidebarMobile"
-                    style="position:fixed;top:0;right:0;bottom:0;width:100vw;height:100vh;background:#000;color:#fff;z-index:10000;display:flex;flex-direction:column;">
+                    style="position:fixed;top:0;right:0;bottom:0;width:100vw;height:100vh;background:#fff;color:#000;z-index:10000;display:flex;flex-direction:column;">
                     <div
-                        style="padding:20px;border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;">
-                        <h4 class="font-weight-bold" style="color:#ffffff;">Mon Panier</h4>
+                        style="padding:20px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;">
+                        <h4 class="font-weight-bold" style="color:#7d716c;">Mon Panier</h4>
                         <button id="closeCartMobile"
-                            style="background:none;border:none;font-size:24px;color:#ffffff;"
+                            style="background:none;border:none;font-size:24px;color:#7d716c;"
                             class="text-dark">&times;</button>
                     </div>
                     <div id="cartContentMobile" style="padding:20px;flex:1;overflow-y:auto;">
@@ -1060,6 +1070,7 @@
                 }
             });
             $('.tab-cart').on('click', function() {
+                refreshCart();
                 $('#cartSidebarMobile').addClass('open');
             });
 
@@ -1080,6 +1091,15 @@
                     $('#cartContentMobile').html(html);
                 });
             }
+            window.refreshCart = refreshCart;
+            window.openCartSidebar = function(){
+                refreshCart();
+                $('#cartSidebar').addClass('open');
+            };
+            window.openCartSidebarMobile = function(){
+                refreshCart();
+                $('#cartSidebarMobile').addClass('open');
+            };
 
             function updateCartCount(count) {
                 $('#cartCount').text(count);

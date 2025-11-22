@@ -55,7 +55,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Carrito
 Route::prefix('cart')->group(function () {
     Route::get('/', [CartController::class, 'index'])->name('cart.index');
+    Route::get('/view', [CartController::class, 'view'])->name('cart.view');
     Route::post('/add', [CartController::class, 'add'])->name('cart.add');
+    Route::post('/update', [CartController::class, 'update'])->name('cart.update');
     Route::post('/remove', [CartController::class, 'remove'])->name('cart.remove');
     Route::post('/clear', [CartController::class, 'clear'])->name('cart.clear');
 });
