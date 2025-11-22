@@ -447,8 +447,9 @@
                                         </li>
                                         <li class="menu-actions d-none d-lg-flex align-items-center">
                                             <div class="header-social d-flex align-items-center mr-3 position-relative" id="userMenuContainerInline">
-                                                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                                @foreach(($socialLinks ?? []) as $link)
+                                                <a href="{{ $link['url'] ?? '#' }}" target="_blank"><i class="{{ $link['icon'] ?? 'fas fa-link' }}"></i></a>
+                                                @endforeach
                                                 @guest
                                                 <a href="#" id="userMenuToggle" title="Cuenta"><i class="fas fa-user"></i></a>
                                                 <div id="userDropdown" style="position:absolute;right:0;top:40px;display:none;min-width:220px;background:#000;border:1px solid #333;border-radius:6px;z-index:9999;">
@@ -461,7 +462,7 @@
                                                     <a href="{{ route('home') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Perfil</a>
                                                     <a href="{{ route('orders.index') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Mis órdenes</a>
                                                     @if(Auth::user()->role === 'admin')
-                                                    <a href="{{ route('admin.orders.index') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Dashboard Admin</a>
+                                                    <a href="{{ route('admin.dashboard') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Dashboard Admin</a>
                                                     @endif
                                                     <form method="POST" action="{{ route('logout') }}" style="margin:0;">
                                                         @csrf
@@ -930,7 +931,7 @@
                 <li><a class="{{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Profil</a></li>
                 <li><a class="{{ request()->routeIs('orders*') ? 'active' : '' }}" href="{{ route('orders.index') }}">Mes commandes</a></li>
                 @if(Auth::user()->role === 'admin')
-                <li><a class="{{ request()->routeIs('admin.orders*') ? 'active' : '' }}" href="{{ route('admin.orders.index') }}">Dashboard Admin</a></li>
+                <li><a class="{{ request()->routeIs('admin.*') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
                 @endif
                 <li>
                     <form method="POST" action="{{ route('logout') }}" style="margin:0;">

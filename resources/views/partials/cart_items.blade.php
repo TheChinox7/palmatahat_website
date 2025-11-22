@@ -9,14 +9,14 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <div>
                         <div class="font-weight-bold">{{ $item['name'] }}</div>
-                        <small>{{ number_format($item['price'],2) }} CHF × {{ $item['quantity'] }}</small>
+                        <small>{{ $currencySymbol }} {{ number_format($item['price'],2) }} × {{ $item['quantity'] }}</small>
                     </div>
                     <button class="btn btn-sm btn-outline-danger" onclick="removeFromCart({{ $item['product_id'] }})">Eliminar</button>
                 </li>
             @endforeach
         </ul>
         <div class="d-flex justify-content-between align-items-center">
-            <strong>Total: {{ number_format($sum,2) }} CHF</strong>
+            <strong>Total: {{ $currencySymbol }} {{ number_format($sum,2) }}</strong>
             <div>
                 <button class="btn btn-light" onclick="clearCart()">Vaciar</button>
                 <a href="{{ route('checkout.show') }}" class="btn btn-primary">Checkout</a>

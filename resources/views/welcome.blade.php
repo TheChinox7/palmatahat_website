@@ -140,135 +140,29 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row g-1">
+            @foreach(($recentProducts ?? []) as $product)
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s"
-                    data-wow-delay=".1s">
+                <div class="single-new-arrival product-card mb-5 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
                     <div class="popular-img">
-                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/27.a.Panama-Hat-Sara-fino-1024x684.jpg" alt="">
-                        <div class="favorit-items">
-                            <!-- <span class="flaticon-heart"></span> -->
-                            <img src="{{asset ('img/gallery/favorit-card.png')}}" alt="">
-                        </div>
+                        @php($cover = $product->coverImage())
+                        @php($images = $product->images)
+                        @php($second = $images->count() > 1 ? $images->firstWhere('id', '!=', optional($cover)->id) : null)
+                        <span class="badge-new">Nouveau</span>
+                        <a href="{{ route('product.show', $product->slug) }}" class="d-block image-stack {{ $second ? 'has-secondary' : '' }}">
+                            <img class="stack-img img-primary" src="{{ $cover ? asset($cover->path) : ($product->image_path ? asset($product->image_path) : asset('img/palma/cats/cat2.svg')) }}" alt="{{ $product->name }}">
+                            @if($second)
+                            <img class="stack-img img-secondary" src="{{ asset($second->path) }}" alt="{{ $product->name }}">
+                            @endif
+                        </a>
                     </div>
                     <div class="popular-caption">
-                        <h3><a href="product_details.html">Pull Tricoté</a></h3>
-                        <span>$ 30.00</span>
+                        <h3><a href="{{ route('product.show', $product->slug) }}">{{ $product->name }}</a></h3>
+                        <span>{{ $currencySymbol }} {{ number_format($product->price,2) }}</span>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s"
-                    data-wow-delay=".2s">
-                    <div class="popular-img">
-                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/5.a.Panama-hat-cavalier-llano-rosas-1024x684.jpg" alt="">
-                        <div class="favorit-items">
-                            <!-- <span class="flaticon-heart"></span> -->
-                            <img src="{{asset ('img/gallery/favorit-card.png')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="popular-caption">
-                        <h3><a href="product_details.html">Pull Tricoté</a></h3>
-                        <span>$ 30.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s"
-                    data-wow-delay=".3s">
-                    <div class="popular-img">
-                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/28.a.-Panama-Hat-Isabel-1024x684.jpg" alt="">
-                        <div class="favorit-items">
-                            <!-- <span class="flaticon-heart"></span> -->
-                            <img src="{{asset ('img/gallery/favorit-card.png')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="popular-caption">
-                        <h3><a href="product_details.html">Pull Tricoté</a></h3>
-                        <span>$ 30.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s"
-                    data-wow-delay=".4s">
-                    <div class="popular-img">
-                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/20.a.-Panama-Hat-Analu-1024x684.jpg" alt="">
-                        <div class="favorit-items">
-                            <!-- <span class="flaticon-heart"></span> -->
-                            <img src="{{asset ('img/gallery/favorit-card.png')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="popular-caption">
-                        <h3><a href="product_details.html">Knitted Jumper</a></h3>
-                        <span>$ 30.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s"
-                    data-wow-delay=".5s">
-                    <div class="popular-img">
-                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/18.a.Panama-Hat-Santa-Ana-1024x684.jpg" alt="">
-                        <div class="favorit-items">
-                            <!-- <span class="flaticon-heart"></span> -->
-                            <img src="{{asset ('img/gallery/favorit-card.png')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="popular-caption">
-                        <h3><a href="product_details.html">Pull Tricoté</a></h3>
-                        <span>$ 30.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s"
-                    data-wow-delay=".6s">
-                    <div class="popular-img">
-                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/22.a.-Panama-Hat-Veronica-summer-1024x684.jpg" alt="">
-                        <div class="favorit-items">
-                            <!-- <span class="flaticon-heart"></span> -->
-                            <img src="{{asset ('img/gallery/favorit-card.png')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="popular-caption">
-                        <h3><a href="product_details.html">Pull Tricoté</a></h3>
-                        <span>$ 30.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s"
-                    data-wow-delay=".7s">
-                    <div class="popular-img">
-                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/12a.Bolso-de-mano-pequeno-1024x684.jpg" alt="">
-                        <div class="favorit-items">
-                            <!-- <span class="flaticon-heart"></span> -->
-                            <img src="{{asset ('img/gallery/favorit-card.png')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="popular-caption">
-                        <h3><a href="product_details.html">Pull Tricoté</a></h3>
-                        <span>$ 30.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s"
-                    data-wow-delay=".8s">
-                    <div class="popular-img">
-                        <img src="https://homeroortega.com/wp-content/uploads/2024/07/21.a.-Panama-Hat-Emilia-1024x684.jpg" alt="">
-                        <div class="favorit-items">
-                            <!-- <span class="flaticon-heart"></span> -->
-                            <img src="{{asset ('img/gallery/favorit-card.png')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="popular-caption">
-                        <h3><a href="product_details.html">Pull Tricoté</a></h3>
-                        <span>$ 30.00</span>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <!-- Button -->
         <div class="row justify-content-center">

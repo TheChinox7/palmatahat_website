@@ -1,16 +1,18 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-<div class="container py-4">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2>Categorías</h2>
-        <a href="{{ route('admin.categories.create') }}" class="btn btn-primary">Nueva categoría</a>
-    </div>
-    <table class="table table-striped">
+<div class="container-fluid">
+    <div class="card p-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h2 class="h5 m-0">Catégories</h2>
+            <a href="{{ route('admin.categories.create') }}" class="btn btn-brand btn-sm">Nouvelle catégorie</a>
+        </div>
+        <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle table-modern">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nombre</th>
+                <th>Nom</th>
                 <th>Slug</th>
                 <th></th>
             </tr>
@@ -22,17 +24,19 @@
                 <td>{{ $category->name }}</td>
                 <td>{{ $category->slug }}</td>
                 <td class="text-right">
-                    <a href="{{ route('admin.categories.edit', $category) }}" class="btn btn-sm btn-secondary">Editar</a>
+                    <a href="{{ route('admin.categories.edit', $category) }}" class="btn btn-sm btn-outline-secondary">Éditer</a>
                     <form action="{{ route('admin.categories.destroy', $category) }}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-sm btn-danger" onclick="return confirm('¿Eliminar?')">Eliminar</button>
+                        <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Supprimer?')">Supprimer</button>
                     </form>
                 </td>
             </tr>
             @endforeach
         </tbody>
-    </table>
-    {{ $categories->links() }}
+        </table>
+        </div>
+        {{ $categories->links() }}
+    </div>
 </div>
 @endsection

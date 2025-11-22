@@ -122,3 +122,47 @@
 .content-section:nth-child(6) .animate-image {
     animation-delay: 1s;
 }
+
+/* Hover swap de imágenes en tarjetas de producto */
+.product-card .image-stack {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+.product-card .image-stack .stack-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform .5s ease, opacity .5s ease;
+}
+.product-card .image-stack .img-secondary {
+    transform: translateX(100%);
+    opacity: 0;
+}
+.product-card .image-stack.has-secondary:hover .img-primary {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.product-card .image-stack.has-secondary:hover .img-secondary {
+    transform: translateX(0);
+    opacity: 1;
+}
+.new-arrival .single-new-arrival .popular-caption h3 a { text-decoration: none !important; }
+.new-arrival .single-new-arrival:hover .popular-caption h3 a { text-decoration: none !important; }
+.product-card .badge-new {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #7d716c;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 16px;
+    z-index: 2;
+}

@@ -10,14 +10,13 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController as UserOrderController;
-use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
-use App\Http\Controllers\Admin\ProductController as AdminProductController;
-use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use Illuminate\Support\Facades\Auth;
 // Welcome routes
 Route::get('/', [WelcomeController::class, 'welcome'])->name('welcome');
 //ruta shop
 Route::get('/shop', [WelcomeController::class, 'shop'])->name('shop');
+Route::get('/shop/list', [WelcomeController::class, 'shopList'])->name('shop.list');
+Route::get('/product/{slug}', [WelcomeController::class, 'productShow'])->name('product.show');
 //ruta contact
 Route::get('/contact', [WelcomeController::class, 'contact'])->name('contact');
 //ruta about
@@ -71,9 +70,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/orders/{order}', [UserOrderController::class, 'show'])->name('orders.show');
 });
 
-// Panel de administrador
-Route::middleware(['auth','admin'])->prefix('admin')->name('admin.')->group(function () {
-    Route::resource('categories', AdminCategoryController::class);
-    Route::resource('products', AdminProductController::class);
-    Route::resource('orders', AdminOrderController::class)->only(['index','show','edit','update','destroy']);
-});
+// Panel de administrador (archivo separado)
+require __DIR__.'/admin.php';
