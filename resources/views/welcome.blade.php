@@ -7,7 +7,7 @@
         <video autoplay muted loop playsinline class="w-100 h-100 position-absolute"
             style="object-fit:cover; left:0; top:0; z-index:0;" preload="auto"
             poster="{{ asset('img/palma/slider-poster.jpg') }}">
-            <source src="{{ asset('img/palma/newslider.mp4') }}" type="video/mp4">
+            <source src="{{ asset('img/palma/slider.mp4') }}" type="video/mp4">
             Votre navigateur ne supporte pas la vidéo.
         </video>
         <div class="position-absolute w-100 h-100" style="left:0; top:0; background:rgba(0,0,0,0.3); z-index:1;"></div>
@@ -70,8 +70,35 @@
                 pointer-events: none;
                 background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0))
             }
+            .categories-slider .slick-arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 44px;
+                height: 44px;
+                border: none;
+                border-radius: 999px;
+                background: rgba(0,0,0,0.6);
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+                line-height: 1;
+                cursor: pointer;
+                z-index: 2;
+            }
+            .categories-slider .slick-prev { left: 6px; }
+            .categories-slider .slick-next { right: 6px; }
+            .categories-slider .slick-arrow.slick-disabled { opacity: .4; cursor: default; }
+            .categories-slider.dot-style .slick-dots { bottom: -30px; }
+            .categories-slider.dot-style .slick-dots button { margin-bottom: 0; }
+            .categories-slider { margin-bottom: 50px; }
+            .categories-slider.dot-style .slick-dots button { background: #000; }
+            .categories-slider.dot-style .slick-dots .slick-active button { background: #000; }
+            .categories-slider.dot-style .slick-dots li.slick-active button::before { border-color: #000; }
         </style>
-        <div class="categories-slider">
+        <div class="categories-slider dot-style">
             <div class="single-popular-items mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
                 <div class="popular-img">
                     <img src="{{ asset('img/palma/cats/cat1.svg') }}" alt="">
@@ -107,9 +134,9 @@
             </div>
             <div class="single-popular-items mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
                 <div class="popular-img">
-                    <img src="{{ asset('img/palma/cats/cat4.svg') }}" alt="">
+                    <img src="{{ asset('img/palma/cats/cat5.svg') }}" alt="">
                     <div class="img-cap">
-                        <span style="font-size:20px;">Accessoires</span>
+                        <span style="font-size:20px;">Personalice</span>
                     </div>
                     <div class="favorit-items">
                         <a href="{{ route('shop') }}" class="btn">Acheter Maintenant</a>
@@ -118,9 +145,9 @@
             </div>
             <div class="single-popular-items mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
                 <div class="popular-img">
-                    <img src="{{ asset('img/palma/cats/cat5.svg') }}" alt="">
+                    <img src="{{ asset('img/palma/cats/cat4.svg') }}" alt="">
                     <div class="img-cap">
-                        <span style="font-size:20px;">Personalice</span>
+                        <span style="font-size:20px;">Accessoires</span>
                     </div>
                     <div class="favorit-items">
                         <a href="{{ route('shop') }}" class="btn">Acheter Maintenant</a>

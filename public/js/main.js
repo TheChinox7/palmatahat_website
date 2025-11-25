@@ -241,11 +241,13 @@
       $categories.toggleClass('has-more-right', currentSlide + s < t);
     });
     $categories.slick({
-      dots: false,
+      dots: true,
       infinite: false,
       autoplay: false,
       speed: 400,
-      arrows: false,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
       draggable: true,
       swipe: true,
       slidesToShow: 4,
