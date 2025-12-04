@@ -1,32 +1,44 @@
 @extends('layouts.app')
 
 @section('slider')
-<div class="slider-active">
+<div class="slider-active dot-style">
     <!-- Single -->
-    <div class="single-slider hero-overly slider-height d-flex align-items-center position-relative w-100" style="width:100vw;">
-        <video autoplay muted loop playsinline class="w-100 h-100 position-absolute"
-            style="object-fit:cover; left:0; top:0; z-index:0;" preload="auto"
-            poster="{{ asset('img/palma/slider-poster.jpg') }}">
-            <source src="{{ asset('img/palma/slider.mp4') }}" type="video/mp4">
-            Votre navigateur ne supporte pas la vidéo.
-        </video>
-        <div class="position-absolute w-100 h-100" style="left:0; top:0; background:rgba(0,0,0,0.3); z-index:1;"></div>
+    <div class="single-slider slider-bg1 hero-overly slider-height d-flex align-items-center" style="background-image: url('{{ asset('img/palma/slider/1.jpg') }}') !important;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-9">
+                    <!-- Hero Caption -->
+                    <div class="hero__caption">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Single -->
+    <div class="single-slider slider-bg2 hero-overly slider-height d-flex align-items-center" style="background-image: url('{{ asset('img/palma/slider/2.jpg') }}') !important;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-9">
+                    <!-- Hero Caption -->
+                    <div class="hero__caption">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Single -->
+    <div class="single-slider slider-bg3 hero-overly slider-height d-flex align-items-center" style="background-image: url('{{ asset('img/palma/slider/3.jpg') }}') !important;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-9">
+                    <!-- Hero Caption -->
+                    <div class="hero__caption">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<style>
-    .slider-active .slick-dots,
-    .slider-active .owl-dots,
-    .slider-active .slick-arrow {
-        display: none !important;
-    }
-
-    .slider-active {
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw);
-        overflow: hidden;
-    }
-</style>
 @endsection
 
 @section('content')
@@ -70,6 +82,7 @@
                 pointer-events: none;
                 background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0))
             }
+
             .categories-slider .slick-arrow {
                 position: absolute;
                 top: 50%;
@@ -78,7 +91,7 @@
                 height: 44px;
                 border: none;
                 border-radius: 999px;
-                background: rgba(0,0,0,0.6);
+                background: rgba(0, 0, 0, 0.6);
                 color: #fff;
                 display: flex;
                 align-items: center;
@@ -88,15 +101,43 @@
                 cursor: pointer;
                 z-index: 2;
             }
-            .categories-slider .slick-prev { left: 6px; }
-            .categories-slider .slick-next { right: 6px; }
-            .categories-slider .slick-arrow.slick-disabled { opacity: .4; cursor: default; }
-            .categories-slider.dot-style .slick-dots { bottom: -30px; }
-            .categories-slider.dot-style .slick-dots button { margin-bottom: 0; }
-            .categories-slider { margin-bottom: 50px; }
-            .categories-slider.dot-style .slick-dots button { background: #000; }
-            .categories-slider.dot-style .slick-dots .slick-active button { background: #000; }
-            .categories-slider.dot-style .slick-dots li.slick-active button::before { border-color: #000; }
+
+            .categories-slider .slick-prev {
+                left: 6px;
+            }
+
+            .categories-slider .slick-next {
+                right: 6px;
+            }
+
+            .categories-slider .slick-arrow.slick-disabled {
+                opacity: .4;
+                cursor: default;
+            }
+
+            .categories-slider.dot-style .slick-dots {
+                bottom: -30px;
+            }
+
+            .categories-slider.dot-style .slick-dots button {
+                margin-bottom: 0;
+            }
+
+            .categories-slider {
+                margin-bottom: 50px;
+            }
+
+            .categories-slider.dot-style .slick-dots button {
+                background: #000;
+            }
+
+            .categories-slider.dot-style .slick-dots .slick-active button {
+                background: #000;
+            }
+
+            .categories-slider.dot-style .slick-dots li.slick-active button::before {
+                border-color: #000;
+            }
         </style>
         <div class="categories-slider dot-style">
             <div class="single-popular-items mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
