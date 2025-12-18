@@ -242,7 +242,7 @@
 </div>
 <section class="collection section-bg2 section-padding30 section-over1"
     data-background="{{ asset('img/palma/section_bg01.jpg') }}"
-    style="width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);position:relative;overflow:hidden;">
+    style="width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);position:relative;overflow:hidden;background-position: top center; background-size: cover; background-repeat: no-repeat;">
     <div class="position-absolute w-100 h-100" style="left:0; top:0; background:rgba(0,0,0,0.3); z-index:0.5;"></div>
 
     <div class="row justify-content-center">

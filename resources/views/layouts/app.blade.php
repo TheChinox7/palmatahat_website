@@ -116,13 +116,13 @@
 
         .main-menu nav ul li a {
             padding: 8px 16px;
-            color: #ffffff !important;
+            color: #D4AF37 !important;
             text-decoration: none;
             transition: all 0.3s;
         }
 
         .main-menu nav ul li a:hover {
-            color: #cccccc !important;
+            color: #F1C40F !important;
         }
 
         .btn-brand {
@@ -559,7 +559,7 @@
                                     }
 
                                     .dropdown-menu li a {
-                                        color: #ffffff !important;
+                                        color: #D4AF37 !important;
                                         display: block;
                                         width: 100%;
                                         box-sizing: border-box;
@@ -570,7 +570,7 @@
 
                                     .dropdown-menu li a:hover {
                                         background-color: #333333 !important;
-                                        color: #cccccc !important;
+                                        color: #F1C40F !important;
                                     }
 
                                     .dropdown.show-dropdown>.dropdown-menu {
