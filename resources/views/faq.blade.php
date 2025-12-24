@@ -42,13 +42,13 @@
                             <div class="card-header" id="faq2">
                                 <h5 class="mb-0">
                                     <a href="#collapse2" class="btn collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" tabindex="0">
-                                        Comment identifier un vrai chapeau Panama ?
+                                        Comment identifier un vrai <b>chapeau Panama</b> ?
                                     </a>
                                 </h5>
                             </div>
                             <div id="collapse2" class="collapse" aria-labelledby="faq2" data-parent="#faqAccordion">
                                 <div class="card-body">
-                                    Un véritable Panama s'identifie par la présence d’une rosace au sommet de la couronne, point de départ du tissage. Cette rosace peut varier selon la qualité, de 3 à 25 cercles pour les chapeaux haut de gamme, ce qui détermine leur authenticité.<br>
+                                    Un véritable <b>Panama</b> s'identifie par la présence d’une rosace au sommet de la couronne, point de départ du tissage. Cette rosace peut varier selon la qualité, de 3 à 25 cercles pour les chapeaux haut de gamme, ce qui détermine leur authenticité.<br>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                             <div class="card-header" id="faq3">
                                 <h5 class="mb-0">
                                     <a href="#collapse3" class="btn collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" tabindex="0">
-                                        Les panamas peuvent-ils se plier ?
+                                        Les <b>panamas</b> peuvent-ils se plier ?
                                     </a>
                                 </h5>
                             </div>
@@ -70,13 +70,13 @@
                             <div class="card-header" id="faq4">
                                 <h5 class="mb-0">
                                     <a href="#collapse4" class="btn collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" tabindex="0">
-                                        Quelles sont les difficultés pour fabriquer un Panama ?
+                                        Quelles sont les difficultés pour fabriquer un <b>Panama</b> ?
                                     </a>
                                 </h5>
                             </div>
                             <div id="collapse4" class="collapse" aria-labelledby="faq4" data-parent="#faqAccordion">
                                 <div class="card-body">
-                                    La fabrication artisanale d’un véritable Panama est un savoir-faire exigeant, influencé par l'humidité, la chaleur, la pluie et l'exposition au soleil. Ces conditions affectent la souplesse de la paille et la régularité du tissage, rendant chaque chapeau unique et précieux.<br>
+                                    La fabrication <b>artisanale</b> d’un véritable <b>Panama</b> est un savoir-faire exigeant, influencé par l'humidité, la chaleur, la pluie et l'exposition au soleil. Ces conditions affectent la souplesse de la paille et la régularité du tissage, rendant chaque chapeau unique et précieux.<br>
                                 </div>
                             </div>
                         </div>

@@ -42,9 +42,9 @@
                 <div class="col-lg-10">
                     <div class="section-tittle mb-60 text-left pt-10">
                         <p class="pera" style="font-size: 1.6rem; color: #000;">
-                            Bandes ethniques réalisée par des artisans équatoriens
-                            Nous célébrons l'héritage culturel de L'Equateur avec des bandes tissées à la main par des
-                            artisans locaux. Utilisant des techniques ancestrales et de motif authentiques.
+                            Bandes ethniques réalisée par des <b>artisans</b> équatoriens
+                            Nous célébrons l'héritage culturel de L'Equateur avec des bandes tissées <b>à la main</b> par des
+                            <b>artisans</b> locaux. Utilisant des techniques ancestrales et de motif authentiques.
                             <br>
                             Chaque pièce reflète l'identité et la créativité des communautés indigènes apportant des
                             couleurs et des motifs uniques qui enrichissent votre chapeau

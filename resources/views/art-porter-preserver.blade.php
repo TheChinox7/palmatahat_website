@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-tittle text-center mb-5">
-                    <h1>L'Art de Porter et Préserver votre Panama</h1>
+                    <h1>L'Art de Porter et Préserver votre <b>Panama</b></h1>
                     <p class="pera">La paille toquilla est une matière organique qui à besoin d’un certain degré d'humidité pour préserver et maintenir sa flexibilité il n'est donc pas recommandé de laisser le chapeau exposé au soleil.
                     </p>
                 </div>
@@ -76,11 +76,11 @@
                         </li>
                         <li style="margin-bottom: 15px; padding-left: 20px; position: relative;">
                             <span style="position: absolute; left: 0; color: #8B4513; font-weight: bold;">•</span>
-                            Contrairement à ce que l'on croit, la plupart des chapeaux Panama ne peuvent pas être roulés. Seuls quelques-uns de très haute qualité et texture fine peuvent.
+                            Contrairement à ce que l'on croit, la plupart des <b>chapeaux Panama</b> ne peuvent pas être roulés. Seuls quelques-uns de très haute qualité et texture fine peuvent.
                         </li>
                         <li style="margin-bottom: 15px; padding-left: 20px; position: relative;">
                             <span style="position: absolute; left: 0; color: #8B4513; font-weight: bold;">•</span>
-                            Un véritable chapeau panama avec les bons soins il peut vous accompagner pendant de nombreuses années.
+                            Un véritable <b>chapeau panama</b> avec les bons soins il peut vous accompagner pendant de nombreuses années.
                         </li>
                         <li style="margin-bottom: 15px; padding-left: 20px; position: relative;">
                             <span style="position: absolute; left: 0; color: #8B4513; font-weight: bold;">•</span>

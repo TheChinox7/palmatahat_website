@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="contact-title">Nous contacter</h2>
-                    <p>Vous avez des questions ou souhaitez en savoir plus sur nos chapeaux artisanaux ? N'hésitez pas à
+                    <p>Vous avez des questions ou souhaitez en savoir plus sur nos chapeaux <b>artisanaux</b> ? N'hésitez pas à
                         nous contacter!</p>
                 </div>
 

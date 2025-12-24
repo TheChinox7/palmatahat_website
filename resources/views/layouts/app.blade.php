@@ -38,6 +38,11 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom-animations.css') }}">
     <style>
+        /* Global override for bold text to inherit color */
+        b, strong {
+            color: inherit !important;
+        }
+
         /* Estilos generales */
         .menu-wrapper {
             background-color: #000000 !important;
@@ -449,7 +454,7 @@
                                                 <li style="width: 100%;"><a href="{{ route('about.processus') }}">Processus</a></li>
                                                 <li style="width: 100%;"><a href="{{ route('about.faq') }}">Questions fréquentes</a></li>
                                                 <li style="width: 100%;"><a href="{{ route('about.comment-commander') }}">COMMENT LE PRESERVER</a></li>
-                                                <li style="width: 100%;"><a href="{{ route('about.art-porter-preserver') }}">Lart de porter et préserver votre panama</a></li>
+                                                <li style="width: 100%;"><a href="{{ route('about.art-porter-preserver') }}">Lart de porter et préserver votre <b>panama</b></a></li>
                                             </ul>
                                         </li>
                                         <li class="{{ request()->routeIs('contact') ? 'active' : '' }}">
@@ -884,7 +889,7 @@
         </a>
         <button type="button" class="tab-item tab-hat {{ request()->routeIs('about*') ? 'active' : '' }}" aria-label="Panama Hat">
             <i class="fas fa-hat-cowboy"></i>
-            <span>Panama</span>
+            <span><b>Panama</b></span>
         </button>
         @guest
         <button type="button" class="tab-item tab-account {{ request()->routeIs('login') || request()->routeIs('register') ? 'active' : '' }}" aria-label="Compte">
@@ -910,7 +915,7 @@
         <div class="mobile-sheet__content">
             <div class="mobile-sheet__handle"></div>
             <div class="d-flex justify-content-between align-items-center mb-2 px-2">
-                <strong id="mobileMenuTitle" style="color:#fff;">Panama</strong>
+                <strong id="mobileMenuTitle" style="color:#fff;"><b>Panama</b></strong>
                 <button id="mobileMenuClose" aria-label="Fermer le menu"
                     style="background:none;border:none;color:#fff;font-size:24px;line-height:1;min-width:44px;min-height:44px;">&times;</button>
             </div>
@@ -918,7 +923,7 @@
                 <li><a class="{{ request()->routeIs('about.montecristi') ? 'active' : '' }}" href="{{ route('about.montecristi') }}">Chapeaux Montecristi</a></li>
                 <li><a class="{{ request()->routeIs('about.histoire') ? 'active' : '' }}" href="{{ route('about.histoire') }}">Mon histoire</a></li>
                 <li><a class="{{ request()->routeIs('about.bandes') ? 'active' : '' }}" href="{{ route('about.bandes') }}">Bandes pour chapeaux</a></li>
-                <li><a class="{{ request()->routeIs('about.origine') ? 'active' : '' }}" href="{{ route('about.origine') }}">Origine du Panama Haut</a></li>
+                <li><a class="{{ request()->routeIs('about.origine') ? 'active' : '' }}" href="{{ route('about.origine') }}">Origine du <b>Panama Haut</b></a></li>
                 <li><a class="{{ request()->routeIs('about.processus') ? 'active' : '' }}" href="{{ route('about.processus') }}">Service à la clientèle</a></li>
                 <li><a class="{{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a></li>
             </ul>

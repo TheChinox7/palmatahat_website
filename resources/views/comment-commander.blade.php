@@ -24,10 +24,10 @@
                         <p style="font-size: 1.6rem; text-align: justify; color: black;"><strong>Comment commander
                                 ?</strong>
                             <br><br>
-                            Découvrez le chapeau Panama authentique en Suisse. Je suis ambassadrice de l'artisanat
-                            équatorien en Suisse et fièrement originaire d'Équateur. À travers cette boutique je
-                            vous propose une sélection exclusive des chapeaux Panama 100% fait main par nos maîtres
-                            artisans.
+                            Découvrez le <b>chapeau Panama</b> authentique en Suisse. Je suis ambassadrice de l'<b>artisanat
+                            équatorien</b> en Suisse et fièrement originaire d'Équateur. À travers cette boutique je
+                            vous propose une sélection exclusive des <b>chapeaux Panama</b> 100% <b>fait main</b> par nos maîtres
+                            <b>artisans</b>.
                             <br><br>
                             Pourquoi choisir nos chapeaux ?
                             <br>
@@ -81,11 +81,11 @@
                         <div class="col-lg-6">
                             <div class="section-tittle mb-60 pt-10">
                                 <p style="font-size: 1.6rem; text-align: justify; color: black;">
-                                    Découvrez l'élégance de chapeau Panama authentique en Suisse
+                                    Découvrez l'élégance de <b>chapeau Panama</b> authentique en Suisse
                                     <br><br>
-                                    Je suis ambassadrice de l'artisanat équatorien en Suisse et fièrement originaire
+                                    Je suis ambassadrice de l'<b>artisanat équatorien</b> en Suisse et fièrement originaire
                                     d'Équateur. À travers cette boutique je vous propose une sélection exclusive des
-                                    chapeaux Panama 100% fait main par nos maîtres artisans.
+                                    <b>chapeaux Panama</b> 100% <b>fait main</b> par nos maîtres <b>artisans</b>.
                                     <br><br>
                                     <strong>Pourquoi choisir nos chapeaux:</strong>
                                     <br><br>
@@ -124,21 +124,21 @@
                         <div class="col-lg-6">
                             <div class="section-tittle mb-60 pt-10">
                                 <p style="font-size: 1.6rem; text-align: justify; color: black;">
-                                    <strong>Découvrez l’élégance du véritable chapeau Panama en Suisse</strong><br>
-                                    <em>L’artisanat équatorien à votre portée</em>
+                                    <strong>Découvrez l’élégance du véritable <b>chapeau Panama</b> en Suisse</strong><br>
+                                    <em>L’<b>artisanat équatorien</b> à votre portée</em>
                                     <br><br>
-                                    Je suis <strong>Leticia</strong>, ambassadrice de l’artisanat équatorien en Suisse et fière originaire de l’Équateur. À travers <strong>Palmata Hat</strong>, je vous présente une sélection exclusive de <strong>chapeaux Panama</strong>, 100 % faits à la main par nos maîtres artisans, avec de la <strong>paille toquilla naturelle</strong>, reconnue dans le monde entier pour sa finesse et sa légèreté.
+                                    Je suis <strong>Leticia</strong>, ambassadrice de l’<b>artisanat équatorien</b> en Suisse et fière originaire de l’Équateur. À travers <strong>Palmata Hat</strong>, je vous présente une sélection exclusive de <strong><b>chapeaux Panama</b></strong>, 100 % <b>faits à la main</b> par nos maîtres <b>artisans</b>, avec de la <strong>paille toquilla naturelle</strong>, reconnue dans le monde entier pour sa finesse et sa légèreté.
                                     <br><br>
                                     <strong>Pourquoi choisir nos chapeaux ?</strong>
                                     <br>
-                                    • Faits à la main avec de la paille toquilla naturelle<br>
+                                    • <b>Faits à la main</b> avec de la paille toquilla naturelle<br>
                                     • Modèles barillet, standard et haut de gamme<br>
                                     • Importateur direct – livraison rapide en Suisse (10 à 15 jours)
                                     <br><br>
                                     <strong>Le processus de fabrication</strong>
                                     <br>
                                     Découvrez, à travers notre vidéo exclusive, le savoir-faire ancestral transmis de génération en génération.
-                                    Chaque chapeau est tissé à la main en Équateur, puis façonné et fini avec soin avant d’arriver entre vos mains.
+                                    Chaque chapeau est tissé <b>à la main</b> en Équateur, puis façonné et fini avec soin avant d’arriver entre vos mains.
                                 </p>
                             </div>
                         </div>

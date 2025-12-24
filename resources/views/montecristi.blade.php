@@ -34,7 +34,7 @@
                             <p class="pera" style="font-size: 1.6rem; text-align: justify; color: #000;">J'ai eu l'occasion
                                 de visiter cette région et de constater sur place le savoir-faire, l'engagement et le niveau
                                 de maîtrise qu'exige la fabrication de chaque pièce. Le climat de Montecristi, sa terre
-                                fertile et la passion de son peuple créent les conditions idéales pour un artisanat
+                                fertile et la passion de son peuple créent les conditions idéales pour un <b>artisanat</b>
                                 d'exception.</p>
                             <p class="pera" style="font-size: 1.6rem; text-align: justify; color: #000;">Chez Palmatahat,
                                 nous souhaitons partager l'excellence de Montecristi avec le monde et porter son prestige
@@ -49,7 +49,7 @@
                     <div class="row align-items-center mb-5">
                         <div class="col-lg-6">
                             <p class="pera" style="font-size: 1.6rem; text-align: justify; line-height: 1.6; color: #000;">
-                                Les chapeaux Montecristi sont reconnus internationalement pour leur finesse, leur légèreté
+                                Les chapeaux Montecristi sont reconnus international pour leur finesse, leur légèreté
                                 et leur élégance naturelle. Chaque pièce est le fruit de centaines d'heures de travail
                                 patient et méticuleux, entièrement réalisé à la main par des artisans experts.</p>
                             <div class="row mt-4">
@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="list-unstyled text-left">
-                                        <li class="mb-2" style="color: #000;">✓ Vous soutenez la communauté d'artisans</li>
+                                        <li class="mb-2" style="color: #000;">✓ Vous soutenez la communauté d'<b>artisans</b></li>
                                         <li class="mb-2" style="color: #000;">✓ Vous contribuez à préserver un patrimoine
                                             vivant</li>
                                         <li class="mb-2" style="color: #000;">✓ Qualité et élégance intemporelles</li>

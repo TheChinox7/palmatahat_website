@@ -177,7 +177,7 @@
                 <div class="popular-img">
                     <img src="{{ asset('img/palma/cats/cat5.svg') }}" alt="">
                     <div class="img-cap">
-                        <span style="font-size:20px;">Personalice</span>
+                        <span style="font-size:20px;">FILLES</span>
                     </div>
                     <div class="favorit-items">
                         <a href="{{ route('shop') }}" class="btn">Acheter Maintenant</a>
@@ -188,7 +188,7 @@
                 <div class="popular-img">
                     <img src="{{ asset('img/palma/cats/cat4.svg') }}" alt="">
                     <div class="img-cap">
-                        <span style="font-size:20px;">Accessoires</span>
+                        <span style="font-size:20px;">BANDES ET ACCESSOIRES</span>
                     </div>
                     <div class="favorit-items">
                         <a href="{{ route('shop') }}" class="btn">Acheter Maintenant</a>
@@ -204,7 +204,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8 col-md-10">
                 <div class="section-tittle mb-60 text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                    <h2>Nos<br>Produits</h2>
+                    <h2 style="font-size: 35px;">Nos<br>Produits</h2>
                 </div>
             </div>
         </div>
@@ -241,14 +241,14 @@
     </div>
 </div>
 <section class="collection section-bg2 section-padding30 section-over1"
-    data-background="{{ asset('img/palma/section_bg01.jpg') }}"
+    data-background="{{ asset('img/palma/section_bg01.svg') }}"
     style="width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);position:relative;overflow:hidden;background-position: top center; background-size: cover; background-repeat: no-repeat;">
     <div class="position-absolute w-100 h-100" style="left:0; top:0; background:rgba(0,0,0,0.3); z-index:0.5;"></div>
 
     <div class="row justify-content-center">
         <div class="col-xl-7 col-lg-9">
             <div class="single-question text-center">
-                <h2 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s" style="font-size:30px;">Le chapeau de paille toquilla : une histoire tissée de tradition.</h2>
+                <h2 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s" style="font-size:30px;">Le <b>chapeau de paille toquilla</b> : une histoire tissée de tradition.</h2>
                 <a href="{{route('about.processus')}}" class="btn wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">Découvrir</a>
             </div>
         </div>
@@ -266,7 +266,7 @@
                     </div>
                     <div class="location-details">
                         <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s"><a href="{{ route('about') }}" style="font-size:20px;">Plongez au cœur de notre histoire et de notre héritage</a></p>
-                        <a href="{{ route('about.processus') }}" class="btn wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Découvrir</a>
+                        <a href="{{ route('about.histoire') }}" class="btn wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Découvrir</a>
                     </div>
                 </div>
             </div>
@@ -350,7 +350,7 @@
                         <img src="{{ asset('img/icon/2.png') }}" alt="">
                     </div>
                     <div class="cat-cap">
-                        <h5>Fait par nos artisans</h5>
+                        <h5>Fait par nos <b>artisans</b></h5>
                     </div>
                 </div>
             </div>

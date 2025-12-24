@@ -20,15 +20,15 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="row align-items-center">
-                        <h2 class="mb-3" style="font-size:3.2rem; text-align: center;">Processus et élaboration des chapeaux
+                        <h2 class="mb-3" style="font-size:3.2rem; text-align: center;">Processus et élaboration des <b>chapeaux
                             de
-                            paille "toquilla"</h2>
+                            paille "toquilla"</b></h2>
                         <div class="col-lg-6 mt-3">
                             <div class="section-tittle mb-60 pt-10">
-                                <p class="pera" style="font-size: 1.6rem; text-align: justify; color: #000;">Les chapeaux de
+                                <p class="pera" style="font-size: 1.6rem; text-align: justify; color: #000;">Les <b>chapeaux de
                                     paille
-                                    toquilla sont bien plus
-                                    qu'un accessoire, faite à la main, qui ont porté cette ancienne tradition pendant
+                                    toquilla</b> sont bien plus
+                                    qu'un accessoire, <b>faite à la main</b>, qui ont porté cette ancienne tradition pendant
                                     plusieurs années en faisant connaître au monde entier.
                                     <br>
                                     Ce savoir-faire a été reconnu par L'Unesco comme Patrimoine culturel immatériel de
@@ -38,7 +38,7 @@
                                     programme pour sa conservation future est maintenu, encourageant les jeunes à poursuivre
                                     cet héritage qui sert de subsistance économique à de nombreuses familles où chacun en
                                     profite de manière différente. C'est pourquoi, en tant que promoteurs du marché
-                                    artisanal, nous sommes fiers de montrer tout le processus que les artisans équatoriens
+                                    artisanal, nous sommes fiers de montrer tout le processus que les <b>artisans</b> équatoriens
                                     réalisent pour représenter les chapeaux Fedora classique et lo Montecristi en Suisse.
                                 </p>
                             </div>
@@ -84,12 +84,12 @@
                                         C'est une
                                         plante herbacée qui pousse de 1,5 à 3 mètres de haut, dont on extrait le tendre
                                         bourgeon
-                                        ou partie intérieure des feuilles, idéal pour l'élaboration du chapeau de
-                                        Panama.
+                                        ou partie intérieure des feuilles, idéal pour l'élaboration du <b>chapeau de
+                                        Panama</b>.
                                         <br><br>
                                         <strong>Informations importantes:</strong>
                                         <br><br>
-                                        <u>Récolta responsable:</u> Les artisans ne coupent pas la plante entière elle
+                                        <u>Récolta responsable:</u> Les <b>artisans</b> ne coupent pas la plante entière elle
                                         n'est pas
                                         déboisée, l'agriculteur extrait soigneusement les bourgeons appropriés, Sans
                                         nuire à la
@@ -214,9 +214,9 @@
                                         <br><br>
                                         <strong>Slogan</strong>
                                         <br><br>
-                                        A chaque chapeau Panama qui nous proposons incarne la tradition la
+                                        A chaque <b>chapeau Panama</b> qui nous proposons incarne la tradition la
                                         précision et la
-                                        passion, acheter un chapeau Panama c'est acquérir une pièce unique
+                                        passion, acheter un <b>chapeau Panama</b> c'est acquérir une pièce unique
                                         symbole de culture
                                         d'élégance et d'engagement pour l'artisanat équatorien.
                                     </p>
