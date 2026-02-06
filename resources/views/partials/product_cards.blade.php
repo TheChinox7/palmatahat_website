@@ -8,9 +8,9 @@
                     @php($images = $product->images)
                     @php($second = $images->count() > 1 ? $images->firstWhere('id', '!=', optional($cover)->id) : null)
                     <a href="{{ route('product.show', $product->slug) }}" class="d-block image-stack {{ $second ? 'has-secondary' : '' }}">
-                        <img class="stack-img img-primary" src="{{ $cover ? asset($cover->path) : ($product->image_path ? asset($product->image_path) : asset('img/palma/cats/cat2.svg')) }}" alt="{{ $product->name }}">
+                        <img class="stack-img img-primary" loading="lazy" decoding="async" src="{{ $cover ? asset($cover->path) : ($product->image_path ? asset($product->image_path) : asset('img/palma/cats/cat2.svg')) }}" alt="{{ $product->name }}">
                         @if($second)
-                        <img class="stack-img img-secondary" src="{{ asset($second->path) }}" alt="{{ $product->name }}">
+                        <img class="stack-img img-secondary" loading="lazy" decoding="async" src="{{ asset($second->path) }}" alt="{{ $product->name }}">
                         @endif
                     </a>
                     <!-- <div class="favorit-items">

@@ -20,9 +20,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="section-tittle mb-60 text-center pt-10">
-                        <h2 style="font-size:3.2rem;">Processus et élaboration des <b>chapeaux de paille toquilla</b></h2>
+                        <h2>Processus et élaboration des chapeaux de paille toquilla</h2>
                         <h3>Un savoir-faire déclaré patrimoine de L’Humanité</h3>
-                        <p class="pera">Les <b>chapeaux de paille toquilla</b> sont bien plus qu’un accessoire, <b>faite à la main</b>,
+                        <p class="pera">Les chapeaux de paille toquilla sont bien plus qu’un accessoire, faite à la main,
                             qui ont porté
                             cette ancienne tradition pendant plusieurs années en faisant connaître au monde entier.
                             Ce savoir-faire a été reconnu par L’Unesco comme Patrimoine culturel immatériel de
@@ -31,7 +31,7 @@
                             pour sa conservation future est maintenu, encourageant les jeunes à poursuivre cet héritage
                             qui sert de subsistance économique à de nombreuses familles où chacun en profite de
                             manière différente. C'est pourquoi, en tant que promoteurs du marché artisanal, nous
-                            sommes fiers de montrer tout le processus que les <b>artisans</b> équatoriens réalisent pour
+                            sommes fiers de montrer tout le processus que les artisans équatoriens réalisent pour
                             représenter les chapeaux Fedora classique et lo Montecristi en Suisse.</p>
                     </div>
             </div>
@@ -44,11 +44,11 @@
                             La paille toquilla provient d'une plante sauvage que l'on trouve à Montecristi, Manabi, dans un
                             climat subtropical humide propice à sa culture et à la récolte. Cette plante herbacée atteint
                             1,5 à 3 mètres de haut ; on en extrait le tendre bourgeon intérieur des feuilles, idéal pour
-                            l’élaboration du <b>chapeau Panama</b>.
+                            l’élaboration du chapeau Panama.
                         </p>
                         <div class="content-section">
                             <div class="content-image wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
-                                <img src="{{ asset('img/palma/o2.jpg') }}" alt="Récolta responsable" class="img-fluid" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+                                <img src="{{ asset('img/palma/o2.jpg') }}" alt="Récolta responsable" class="img-fluid hover-effect" loading="lazy" decoding="async" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
                             </div>
                             <div class="content-text wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">
                                 <h3>Récolta responsable</h3>
@@ -68,12 +68,12 @@
                                 </p>
                             </div>
                             <div class="content-image wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">
-                                <img src="{{ asset('img/palma/o1.jpg') }}" alt="Sélection de la Fibre" class="img-fluid" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+                                <img src="{{ asset('img/palma/o1.jpg') }}" alt="Sélection de la Fibre" class="img-fluid hover-effect" loading="lazy" decoding="async" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
                             </div>
                         </div>
                         <div class="content-section">
                             <div class="content-image wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
-                                <video controls class="img-fluid" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+                                <video controls class="img-fluid hover-effect" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
                                     <source src="{{ asset('img/palma/processus1.mp4') }}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -98,12 +98,12 @@
                                 </p>
                             </div>
                             <div class="content-image wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">
-                                <img src="{{ asset('img/palma/o4.jpg') }}" alt="Séchage au Soleil" class="img-fluid" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+                                <img src="{{ asset('img/palma/o4.jpg') }}" alt="Séchage au Soleil" class="img-fluid hover-effect" loading="lazy" decoding="async" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
                             </div>
                         </div>
                         <div class="content-section">
                             <div class="content-image wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
-                                <img src="{{ asset('img/palma/o5.jpg') }}" alt="Début de tissage" class="img-fluid" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+                                <img src="{{ asset('img/palma/o5.jpg') }}" alt="Début de tissage" class="img-fluid hover-effect" loading="lazy" decoding="async" style="border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.12);">
                             </div>
                             <div class="content-text wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">
                                 <h3>Le début de tissage la basse de chapeau </h3>
@@ -113,7 +113,7 @@
                                     armado marque le point de départ du tressage.
                                     Une fois cette base formée et les placer sur un petit support en bois le tissage du corps
                                     de chapeau peut commencer.
-                                    Étape définition d'un <b>chapeau Panama</b>
+                                    Étape définition d'un chapeau Panama
                                 </p>
                             </div>
                         </div>
@@ -187,9 +187,9 @@
                         <div class="mt-5">
                             <h3>Slogan</h3>
                             <p class="pera">
-                                A chaque <b>chapeau Panama</b> qui nous proposons incarne la tradition la précision et la
-                                passion, acheter un <b>chapeau Panama</b> c'est acquérir une pièce unique symbole de
-                                culture d'élégance et d'engagement pour <strong>l'artisanat équatorien</strong>.
+                                A chaque chapeau Panama qui nous proposons incarne la tradition la précision et la
+                                passion, acheter un chapeau Panama c'est acquérir une pièce unique symbole de
+                                culture d'élégance et d'engagement pour l'artisanat équatorien.
                             </p>
                         </div>
                     </div>
@@ -197,4 +197,65 @@
             </div>
         </div>
     </div>
+    <style>
+    /* Hover Effect for Images */
+    .hover-effect {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-effect:hover {
+        transform: scale(1.02);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    /* Responsive Typography */
+    .section-tittle h2, h1, h2 {
+        font-size: 50px !important;
+        text-align: center !important;
+    }
+
+    .section-tittle h3, h3, h4 {
+        font-size: 18pt !important;
+    }
+
+    .pera, p, .responsive-text {
+        font-size: 12pt !important;
+        text-align: justify;
+        line-height: 1.8;
+    }
+
+    /* Mobile Adaptations */
+    @media (max-width: 768px) {
+        .section-tittle h2, h1, h2 {
+            font-size: 30px !important;
+        }
+        
+        .section-tittle h3, h3, h4 {
+            font-size: 16pt !important;
+        }
+
+        .pera, p, .responsive-text {
+            font-size: 12pt !important;
+            text-align: left;
+        }
+        .section-tittle {
+            margin-bottom: 30px !important;
+        }
+    }
+    </style>
+@endsection        .pera {
+            font-size: 12pt;
+            text-align: justify;
+            line-height: 1.8;
+            color: black;
+        }
+        h2, h3, .section-tittle h2, .section-tittle h3 {
+            font-size: 50px !important;
+        }
+        @media (max-width: 768px) {
+            h2, h3, .section-tittle h2, .section-tittle h3 {
+                font-size: 30px !important;
+            }
+        }
+    </style>
 @endsection

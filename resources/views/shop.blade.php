@@ -24,15 +24,15 @@
                     <div class="single-listing">
                         <form id="filtersForm" method="GET" action="{{ route('shop') }}" class="filters-card">
                             <div class="mb-3">
-                                <label class="filter-label">Buscar</label>
+                                <label class="filter-label">Rechercher</label>
                                 <div class="input-group filters-input">
                                     <span class="input-group-text"><i class="fas fa-search"></i></span>
-                                    <input type="text" name="search" id="searchInput" value="{{ $search ?? '' }}" class="form-control" placeholder="buscar...">
+                                    <input type="text" name="search" id="searchInput" value="{{ $search ?? '' }}" class="form-control" placeholder="rechercher...">
                                 </div>
                             </div>
 
                             <div class="filter-section">
-                                <span class="filter-label">Categorías</span>
+                                <span class="filter-label">Catégories</span>
                                 <ul class="category-list">
                                     <li><a href="{{ route('shop') }}" class="category-link {{ request('category') ? '' : 'active' }}" aria-current="{{ request('category') ? 'false' : 'true' }}">Tous les produits</a></li>
                                     @foreach(($categories ?? []) as $cat)
@@ -42,13 +42,13 @@
                             </div>
 
                             <div class="filter-section">
-                                <span class="filter-label">Precio</span>
+                                <span class="filter-label">Prix</span>
                                 <div class="range-wrap">
                                     <input type="range" id="rangeMin" min="{{ (int)$globalMin }}" max="{{ (int)$globalMax }}" value="{{ (int)($minPrice ?? $globalMin) }}" class="form-range">
                                     <input type="range" id="rangeMax" min="{{ (int)$globalMin }}" max="{{ (int)$globalMax }}" value="{{ (int)($maxPrice ?? $globalMax) }}" class="form-range">
                                     <input type="hidden" name="min_price" id="minPriceInput" value="{{ $minPrice }}">
                                     <input type="hidden" name="max_price" id="maxPriceInput" value="{{ $maxPrice }}">
-                                    <div class="d-flex justify-content-between mt-1"><small>Price: <span id="rangeLabel"></span></small></div>
+                                    <div class="d-flex justify-content-between mt-1"><small>Prix : <span id="rangeLabel"></span></small></div>
                                 </div>
                             </div>
 
@@ -81,15 +81,15 @@
                         @endforeach
                         @endforeach
                         <select name="sort" class="form-select form-select-sm" onchange="document.getElementById('sortForm').submit()" style="max-width:220px;">
-                            <option value="" {{ $sort=='' ? 'selected':'' }}>Orden pred.</option>
-                            <option value="price_asc" {{ $sort=='price_asc' ? 'selected':'' }}>Precio: menor a mayor</option>
-                            <option value="price_desc" {{ $sort=='price_desc' ? 'selected':'' }}>Precio: mayor a menor</option>
-                            <option value="name_asc" {{ $sort=='name_asc' ? 'selected':'' }}>Nombre A-Z</option>
-                            <option value="name_desc" {{ $sort=='name_desc' ? 'selected':'' }}>Nombre Z-A</option>
+                            <option value="" {{ $sort=='' ? 'selected':'' }}>Tri par défaut</option>
+                            <option value="price_asc" {{ $sort=='price_asc' ? 'selected':'' }}>Prix : croissant</option>
+                            <option value="price_desc" {{ $sort=='price_desc' ? 'selected':'' }}>Prix : décroissant</option>
+                            <option value="name_asc" {{ $sort=='name_asc' ? 'selected':'' }}>Nom A-Z</option>
+                            <option value="name_desc" {{ $sort=='name_desc' ? 'selected':'' }}>Nom Z-A</option>
                         </select>
                         <select name="per_page" class="form-select form-select-sm" onchange="document.getElementById('sortForm').submit()" style="max-width:120px;">
                             @foreach([9,12,18,24] as $pp)
-                            <option value="{{ $pp }}" {{ (int)$perPage === (int)$pp ? 'selected':'' }}>Mostrar {{ $pp }}</option>
+                            <option value="{{ $pp }}" {{ (int)$perPage === (int)$pp ? 'selected':'' }}>Afficher {{ $pp }}</option>
                             @endforeach
                         </select>
                     </form>
@@ -290,6 +290,37 @@
         border-radius: 50%;
         background: #7d716c;
         cursor: pointer;
+    }
+    /* Responsive Typography */
+    .responsive-title, .section-tittle h2, h1, h2, h3, h4 {
+        font-size: 50px !important;
+        text-align: center !important;
+        font-weight: 700;
+        color: black;
+    }
+    h3, h4 {
+        font-size: 18pt !important;
+    }
+    
+    .responsive-text, p, .pera {
+        font-size: 12pt !important;
+        text-align: justify;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .responsive-title, .section-tittle h2, h1, h2 {
+            font-size: 30px !important;
+        }
+        h3, h4 {
+            font-size: 16pt !important;
+        }
+        .responsive-text, p, .pera {
+            font-size: 12pt !important;
+            text-align: left;
+            line-height: 1.6;
+        }
     }
 </style>
 <script>

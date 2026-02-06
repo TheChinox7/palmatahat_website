@@ -20,21 +20,21 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="section-tittle mb-60 text-center pt-10 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="section-tittle mb-60 text-left pt-10 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
                         <h2 class="responsive-title" style="color: #000;">Chapeaux Montecristi</h2>
                     </div>
 
                     <!-- Primera sección: Imagen y texto lado a lado -->
                     <div class="row align-items-center mb-5">
                         <div class="col-lg-6 mb-4 mb-lg-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-                            <img src="{{ asset('img/palma/m1.jpeg') }}" alt="Chapeau Montecristi" class="img-fluid"
+                            <img src="{{ asset('img/palma/m1.jpeg') }}" alt="Chapeau Montecristi" class="img-fluid hover-effect" loading="lazy" decoding="async"
                                  style="width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                         <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                             <p class="pera responsive-text" style="color: #000;">J'ai eu l'occasion
                                 de visiter cette région et de constater sur place le savoir-faire, l'engagement et le niveau
                                 de maîtrise qu'exige la fabrication de chaque pièce. Le climat de Montecristi, sa terre
-                                fertile et la passion de son peuple créent les conditions idéales pour un <b>artisanat</b>
+                                fertile et la passion de son peuple créent les conditions idéales pour un artisanat
                                 d'exception.</p>
                             <p class="pera responsive-text" style="color: #000;">Chez Palmatahat,
                                 nous souhaitons partager l'excellence de Montecristi avec le monde et porter son prestige
@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="list-unstyled text-left">
-                                        <li class="mb-2" style="color: #000;">✓ Vous soutenez la communauté d'<b>artisans</b></li>
+                                        <li class="mb-2" style="color: #000;">✓ Vous soutenez la communauté d'artisans</li>
                                         <li class="mb-2" style="color: #000;">✓ Vous contribuez à préserver un patrimoine
                                             vivant</li>
                                         <li class="mb-2" style="color: #000;">✓ Qualité et élégance intemporelles</li>
@@ -75,18 +75,18 @@
                                         célèbre comme sien"</em></p>
                         </div>
                         <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                            <img src="{{ asset('img/palma/m2.jpg') }}" alt="Artisan travaillant" class="img-fluid"
+                            <img src="{{ asset('img/palma/m2.jpg') }}" alt="Artisan travaillant" class="img-fluid hover-effect" loading="lazy" decoding="async"
                                  style="width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                     </div>
                     <!-- Fourth section: Two equal-sized images -->
                     <div class="row justify-content-center mb-5">
                         <div class="col-lg-6 mb-4 mb-lg-0 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <img src="{{ asset('img/palma/m5.jpg') }}" alt="Chapeau Montecristi" class="img-fluid"
+                            <img src="{{ asset('img/palma/m5.jpg') }}" alt="Chapeau Montecristi" class="img-fluid hover-effect" loading="lazy" decoding="async"
                                  style="width: 100%; height: 600px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                            <img src="{{ asset('img/palma/rubio.png') }}" alt="Chapeau Montecristi" class="img-fluid"
+                            <img src="{{ asset('img/palma/rubio.png') }}" alt="Chapeau Montecristi" class="img-fluid hover-effect" loading="lazy" decoding="async"
                                  style="width: 100%; height: 600px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                     </div>
@@ -96,21 +96,40 @@
     </div>
     
     <style>
-        /* Responsive Typography and Spacing */
-        .responsive-title {
-            font-size: 3.2rem;
+        /* Hover Effect for Images */
+        .hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .responsive-text {
-            font-size: 1.6rem;
+
+        .hover-effect:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        /* Responsive Typography and Spacing */
+        .responsive-title, .section-tittle h2, h1, h2 {
+            font-size: 50px !important;
+            text-align: center !important;
+        }
+
+        h3, h4 {
+            font-size: 18pt !important;
+        }
+
+        .responsive-text, p, .pera, .list-unstyled li {
+            font-size: 12pt !important;
             text-align: justify;
         }
         
         @media (max-width: 768px) {
-            .responsive-title {
-                font-size: 2.2rem;
+            .responsive-title, .section-tittle h2, h1, h2 {
+                font-size: 30px !important;
             }
-            .responsive-text {
-                font-size: 1.1rem;
+            h3, h4 {
+                font-size: 16pt !important;
+            }
+            .responsive-text, p, .pera, .list-unstyled li {
+                font-size: 12pt !important;
                 text-align: left; /* Better readability on mobile */
             }
             .section-tittle {

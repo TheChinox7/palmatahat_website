@@ -54,7 +54,7 @@
         <div class="col-lg-6">
             <div class="card p-3">
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                    <strong>Métricas</strong>
+                    <strong>Métriques</strong>
                 </div>
                 <div class="row g-2">
                     <div class="col-6"><div class="border rounded p-2"><small>En attente</small><div class="h5 m-0">{{ $pendingCount ?? 0 }}</div></div></div>

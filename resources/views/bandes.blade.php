@@ -28,11 +28,11 @@
                     </div>
                     <div class="row mb-5">
                         <div class="col-md-6 mb-4 mb-md-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-                            <img src="{{ asset('img/palma/cats/cat4.svg') }}" alt="Chapeau Montecristi" class="img-fluid"
+                            <img src="{{ asset('img/palma/cats/cat4.svg') }}" alt="Chapeau Montecristi" class="img-fluid hover-effect" loading="lazy" decoding="async"
                                 style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                         <div class="col-md-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
-                            <img src="{{ asset('img/palma/bandes.png') }}" alt="Chapeau Montecristi" class="img-fluid"
+                            <img src="{{ asset('img/palma/bandes.png') }}" alt="Chapeau Montecristi" class="img-fluid hover-effect" loading="lazy" decoding="async"
                                 style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                     </div>
@@ -42,9 +42,9 @@
                 <div class="col-lg-10">
                     <div class="section-tittle mb-60 text-left pt-10 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
                         <p class="pera responsive-text" style="color: #000;">
-                            Bandes ethniques réalisée par des <b>artisans</b> équatoriens
-                            Nous célébrons l'héritage culturel de L'Equateur avec des bandes tissées <b>à la main</b> par des
-                            <b>artisans</b> locaux. Utilisant des techniques ancestrales et de motif authentiques.
+                            Bandes ethniques réalisée par des artisans équatoriens
+                            Nous célébrons l'héritage culturel de L'Equateur avec des bandes tissées à la main par des
+                            artisans locaux. Utilisant des techniques ancestrales et de motif authentiques.
                             <br>
                             Chaque pièce reflète l'identité et la créativité des communautés indigènes apportant des
                             couleurs et des motifs uniques qui enrichissent votre chapeau
@@ -54,11 +54,11 @@
                     </div>
                     <div class="row mb-5">
                         <div class="col-md-6 mb-4 mb-md-0 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <img src="{{ asset('img/palma/snegro.png') }}" alt="Chapeau Montecristi" class="img-fluid"
+                            <img src="{{ asset('img/palma/snegro.png') }}" alt="Chapeau Montecristi" class="img-fluid hover-effect" loading="lazy" decoding="async"
                                 style="width: 100%; height: 500px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                         <div class="col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                            <img src="{{ asset('img/palma/csnegro.png') }}" alt="Chapeau Montecristi" class="img-fluid"
+                            <img src="{{ asset('img/palma/csnegro.png') }}" alt="Chapeau Montecristi" class="img-fluid hover-effect" loading="lazy" decoding="async"
                                 style="width: 100%; height: 500px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                     </div>
@@ -68,21 +68,40 @@
     </div>
 
     <style>
-        /* Responsive Typography and Layout */
-        .responsive-title {
-            font-size: 3.2rem;
+        /* Hover Effect for Images */
+        .hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .responsive-text {
-            font-size: 1.6rem;
+
+        .hover-effect:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        /* Responsive Typography and Layout */
+        .section-tittle h2, .responsive-title, h1, h2 {
+            font-size: 50px !important;
+            text-align: center !important;
+        }
+
+        h3, h4 {
+            font-size: 18pt !important;
+        }
+
+        .responsive-text, p, .pera {
+            font-size: 12pt !important;
             line-height: 1.6;
         }
 
         @media (max-width: 768px) {
-            .responsive-title {
-                font-size: 2.2rem;
+            .section-tittle h2, .responsive-title, h1, h2 {
+                font-size: 30px !important;
             }
-            .responsive-text {
-                font-size: 1.1rem;
+            h3, h4 {
+                font-size: 16pt !important;
+            }
+            .responsive-text, p, .pera {
+                font-size: 12pt !important;
                 text-align: left !important; /* Left align for mobile readability */
             }
             .section-tittle {

@@ -43,6 +43,11 @@
             color: inherit !important;
         }
 
+        /* Fix for Slick Carousel passive event listeners */
+        .slick-slider, .slick-list, .slick-track {
+            touch-action: pan-y;
+        }
+
         /* Estilos generales */
         .menu-wrapper {
             background-color: #000000 !important;
@@ -292,16 +297,17 @@
         @media (max-width: 992px) {
             .menu-wrapper {
                 flex-wrap: wrap;
-                background-color: #ffffff !important;
-                color: #000000 !important;
-                justify-content: center !important;
-                padding: 16px 0 !important;
+                background-color: #000000 !important;
+                color: #ffffff !important;
+                justify-content: space-between !important;
+                padding: 10px 15px !important;
+                align-items: center !important;
             }
 
             header,
             .header-area,
             .main-header {
-                background-color: #ffffff !important;
+                background-color: #000000 !important;
             }
 
             .main-header.header-sticky,
@@ -321,6 +327,7 @@
             .mobile-header-logo img {
                 height: 72px;
                 width: auto;
+                filter: brightness(0) invert(1);
             }
         }
 
@@ -388,7 +395,7 @@
 </head>
 
 <body>
-    <div id="preloader-active">
+    <!-- <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
@@ -397,7 +404,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <header>
         <div class="header-area">
             <div class="main-header header-sticky" style="padding: 0px;">
@@ -432,16 +439,14 @@
                                                 style="width: 100%;">Panama Hat</a>
                                             <ul class="dropdown-menu" style="display: none; position: absolute; left: 0; top: 100%;">
                                                 <li style="width: 100%;"><a href="{{ route('about.montecristi') }}">Chapeaux Montecristi</a></li>
-                                                <li style="width: 100%;"><a href="{{ route('about.histoire') }}">Mon histoire</a></li>
                                                 <li style="width: 100%;"><a href="{{ route('about.bandes') }}">Bandes pour chapeaux</a></li>
-                                                <li style="width: 100%;"><a href="{{ route('about.origine') }}">Origine du Panama Haut</a></li>
                                             </ul>
                                         </li>
                                     </ul>
 
                                     <div class="menu-logo d-none d-lg-block">
                                         <a href="{{ route('welcome') }}">
-                                            <img src="{{ asset('img/palma/logopalma.png') }}" alt="PalmataHat">
+                                            <img src="{{ asset('img/palma/logopalma.png') }}" alt="PalmataHat" decoding="async" fetchpriority="high">
                                         </a>
                                     </div>
 
@@ -449,12 +454,21 @@
                                         <li class="dropdown" style="position: relative;">
                                             <a href="#" class="dropdown-toggle"
                                                 onclick="event.preventDefault(); this.parentElement.classList.toggle('show-dropdown');"
+                                                style="width: 100%;">Histoire et Héritage</a>
+                                            <ul class="dropdown-menu" style="display: none; position: absolute; left: 0; top: 100%;">
+                                                <li style="width: 100%;"><a href="{{ route('about.histoire') }}">Mon histoire</a></li>
+                                                <li style="width: 100%;"><a href="{{ route('about.origine') }}">Origine du Panama Haut</a></li>
+                                                <li style="width: 100%;"><a href="{{ route('about.processus') }}">Processus</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown" style="position: relative;">
+                                            <a href="#" class="dropdown-toggle"
+                                                onclick="event.preventDefault(); this.parentElement.classList.toggle('show-dropdown');"
                                                 style="width: 100%;">Service à la clientèle</a>
                                             <ul class="dropdown-menu" style="display: none; position: absolute; left: 0; top: 100%;">
-                                                <li style="width: 100%;"><a href="{{ route('about.processus') }}">Processus</a></li>
                                                 <li style="width: 100%;"><a href="{{ route('about.faq') }}">Questions fréquentes</a></li>
-                                                <li style="width: 100%;"><a href="{{ route('about.comment-commander') }}">COMMENT LE PRESERVER</a></li>
-                                                <li style="width: 100%;"><a href="{{ route('about.art-porter-preserver') }}">Lart de porter et préserver votre <b>panama</b></a></li>
+                                                <li style="width: 100%;"><a href="{{ route('about.comment-commander') }}">COMMENT COMMANDER</a></li>
+                                                <li style="width: 100%;"><a href="{{ route('about.art-porter-preserver') }}">L'art de porter et préserver votre <b>panama</b></a></li>
                                             </ul>
                                         </li>
                                         <li class="{{ request()->routeIs('contact') ? 'active' : '' }}">
@@ -466,28 +480,28 @@
                                                 <a href="{{ $link['url'] ?? '#' }}" target="_blank"><i class="{{ $link['icon'] ?? 'fas fa-link' }}"></i></a>
                                                 @endforeach
                                                 @guest
-                                                <a href="#" id="userMenuToggle" title="Cuenta"><i class="fas fa-user"></i></a>
+                                                <a href="#" id="userMenuToggle" title="Compte"><i class="fas fa-user"></i></a>
                                                 <div id="userDropdown" style="position:absolute;right:0;top:40px;display:none;min-width:220px;background:#000;border:1px solid #333;border-radius:6px;z-index:9999;">
-                                                    <a href="{{ route('login') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Iniciar sesión</a>
-                                                    <a href="{{ route('register') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Registrarse</a>
+                                                    <a href="{{ route('login') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Connexion</a>
+                                                    <a href="{{ route('register') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">S'inscrire</a>
                                                 </div>
                                                 @else
-                                                <a href="#" id="userMenuToggle" title="Cuenta"><i class="fas fa-user"></i></a>
+                                                <a href="#" id="userMenuToggle" title="Compte"><i class="fas fa-user"></i></a>
                                                 <div id="userDropdown" style="position:absolute;right:0;top:40px;display:none;min-width:240px;background:#000;border:1px solid #333;border-radius:6px;z-index:9999;">
-                                                    <a href="{{ route('home') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Perfil</a>
-                                                    <a href="{{ route('orders.index') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Mis órdenes</a>
+                                                    <a href="{{ route('home') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Profil</a>
+                                                    <a href="{{ route('orders.index') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Mes commandes</a>
                                                     @if(Auth::user()->role === 'admin')
-                                                    <a href="{{ route('admin.dashboard') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Dashboard Admin</a>
+                                                    <a href="{{ route('admin.dashboard') }}" style="display:block;padding:10px 14px;color:#fff;text-decoration:none;">Tableau de bord Admin</a>
                                                     @endif
                                                     <form method="POST" action="{{ route('logout') }}" style="margin:0;">
                                                         @csrf
-                                                        <button type="submit" style="display:block;width:100%;text-align:left;padding:10px 14px;background:none;border:none;color:#fff;">Cerrar sesión</button>
+                                                        <button type="submit" style="display:block;width:100%;text-align:left;padding:10px 14px;background:none;border:none;color:#fff;">Déconnexion</button>
                                                     </form>
                                                 </div>
                                                 @endguest
                                             </div>
                                             <div class="card-stor" id="cartToggle" style="cursor:pointer;">
-                                                <img src="{{ asset('img/gallery/card.svg') }}" alt="">
+                                                <img src="{{ asset('img/gallery/card.svg') }}" alt="" loading="lazy" decoding="async">
                                                 <span id="cartCount">0</span>
                                             </div>
                                             <div id="cartSidebar"
@@ -549,6 +563,12 @@
                                     });
                                 </script>
                                 <style>
+                                    /* Force all menu items to uppercase */
+                                    .main-menu nav ul li a,
+                                    .slicknav_nav li a {
+                                        text-transform: uppercase !important;
+                                    }
+
                                     .dropdown-menu {
                                         background: #000000 !important;
                                         border: 1px solid #333;
@@ -571,6 +591,7 @@
                                         padding: 12px 18px;
                                         white-space: nowrap;
                                         font-size: 16px;
+                                        text-transform: uppercase !important;
                                     }
 
                                     .dropdown-menu li a:hover {
@@ -698,178 +719,211 @@
                                         opacity: 0.9;
                                     }
 
-                                    .mobile-tabbar {
-                                        position: fixed;
-                                        left: 0;
-                                        right: 0;
-                                        bottom: 0;
-                                        height: 72px;
-                                        background: #000000;
-                                        border-top: 1px solid #222222;
-                                        display: grid;
-                                        grid-template-columns: repeat(5, 1fr);
-                                        align-items: center;
-                                        justify-items: center;
-                                        z-index: 10000;
-                                        padding-bottom: env(safe-area-inset-bottom);
-                                    }
-
-                                    .mobile-tabbar .tab-item {
-                                        width: calc(100% - 12px);
-                                        height: 56px;
-                                        display: flex;
-                                        flex-direction: column;
-                                        align-items: center;
-                                        justify-content: center;
-                                        gap: 6px;
-                                        color: #ffffff !important;
-                                        text-decoration: none;
-                                        -webkit-tap-highlight-color: transparent;
-                                        background: transparent;
+                                    /* Estilos del nuevo menú móvil (Hamburguesa) */
+                                    .mobile-menu-btn {
+                                        background: none;
                                         border: none;
-                                        outline: none;
-                                        appearance: none;
-                                        -webkit-appearance: none;
-                                        box-shadow: none;
+                                        font-size: 24px;
+                                        color: #D4AF37;
+                                        padding: 5px;
                                         cursor: pointer;
-                                        border-radius: 12px;
-                                        transition: transform 0.2s ease, background 0.2s ease;
                                     }
 
-                                    .mobile-tabbar .tab-item i {
-                                        font-size: 20px;
-                                    }
-
-                                    .mobile-tabbar .tab-item span {
-                                        font-size: 12px;
-                                    }
-
-                                    .mobile-tabbar .tab-item:active {
-                                        transform: scale(0.98);
-                                    }
-
-                                    .mobile-tabbar .tab-item.active {
-                                        background: #7d716c;
-                                        color: #ffffff !important;
-                                    }
-
-                                    .mobile-tabbar .tab-item .badge {
-                                        position: absolute;
-                                        top: 6px;
-                                        right: 16px;
-                                        background: #dc3545;
-                                        color: #fff;
-                                        border-radius: 10px;
-                                        padding: 0 6px;
-                                        font-size: 10px;
-                                        line-height: 18px;
-                                        min-width: 18px;
-                                        text-align: center;
-                                    }
-
-                                    .mobile-sheet {
+                                    /* Mobile Menu Sidebar */
+                                    #mobileMenuSidebar {
                                         position: fixed;
+                                        top: 0;
                                         left: 0;
-                                        right: 0;
                                         bottom: 0;
-                                        height: 55vh;
+                                        width: 100vw;
+                                        height: 100vh;
                                         background: #000000;
-                                        color: #ffffff;
-                                        transform: translateY(100%);
-                                        transition: transform 0.3s ease;
                                         z-index: 10001;
-                                        border-top-left-radius: 12px;
-                                        border-top-right-radius: 12px;
-                                        padding-bottom: env(safe-area-inset-bottom);
-                                    }
-
-                                    .mobile-sheet.open {
-                                        transform: translateY(0);
-                                    }
-
-                                    .mobile-sheet__content {
-                                        padding: 16px 16px 20px;
-                                    }
-
-                                    .mobile-sheet__handle {
-                                        width: 36px;
-                                        height: 4px;
-                                        background: #333;
-                                        border-radius: 2px;
-                                        margin: 6px auto 12px;
-                                    }
-
-                                    .mobile-sheet ul {
                                         display: flex;
                                         flex-direction: column;
-                                        gap: 12px;
-                                    }
-
-                                    .mobile-sheet ul li a {
-                                        display: block;
-                                        width: 100%;
-                                        padding: 14px 16px;
-                                        color: #ffffff;
-                                        text-decoration: none;
-                                        background: #111111;
-                                        border: 1px solid #222222;
-                                        border-radius: 10px;
-                                        transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
-                                    }
-
-                                    .mobile-sheet ul li a:hover {
-                                        background: #1a1a1a;
-                                        border-color: #333333;
-                                    }
-
-                                    .mobile-sheet ul li a:active {
-                                        transform: scale(0.98);
-                                    }
-
-                                    .mobile-sheet ul li a:focus,
-                                    .mobile-sheet ul li a:focus-visible {
-                                        outline: 2px solid #7d716c;
-                                        outline-offset: 2px;
-                                    }
-
-                                    .mobile-sheet ul li a.active {
-                                        background: #7d716c;
-                                        border-color: #7d716c;
-                                        color: #ffffff;
-                                        font-weight: 600;
-                                    }
-
-                                    .mobile-sheet__overlay {
-                                        position: fixed;
-                                        left: 0;
-                                        right: 0;
-                                        top: 0;
-                                        bottom: 0;
-                                        background: rgba(0, 0, 0, 0.6);
-                                        z-index: 10000;
+                                        transform: translateX(-110%);
                                         opacity: 0;
                                         visibility: hidden;
                                         pointer-events: none;
-                                        transition: opacity 0.25s ease, visibility 0.25s ease;
+                                        transition: transform 0.3s ease, opacity 0.2s ease;
+                                        will-change: transform, opacity;
                                     }
 
-                                    .mobile-sheet__overlay.open {
+                                    #mobileMenuSidebar.open {
+                                        transform: translateX(0);
                                         opacity: 1;
                                         visibility: visible;
                                         pointer-events: auto;
                                     }
 
-                                    body.sheet-opened {
-                                        overflow: hidden;
+                                    .mobile-menu-sidebar ul {
+                                        list-style: none;
+                                        padding: 0;
+                                        margin: 0;
+                                    }
+
+                                    .mobile-menu-sidebar ul li {
+                                        border-bottom: 1px solid #333333;
+                                    }
+
+                                    .mobile-menu-sidebar ul li a {
+                                        display: block;
+                                        padding: 15px 20px;
+                                        color: #ffffff;
+                                        text-decoration: none;
+                                        font-size: 16px;
+                                    }
+
+                                    .mobile-menu-sidebar ul li a:hover {
+                                        background-color: #333333;
+                                    }
+
+                                    .mobile-menu-sidebar .submenu-toggle {
+                                        float: right;
+                                        padding: 0 10px;
+                                        color: #cccccc;
+                                    }
+                                    
+                                    .mobile-menu-sidebar .submenu {
+                                        display: none;
+                                        background-color: #1a1a1a;
+                                    }
+                                    
+                                    .mobile-menu-sidebar .submenu li a {
+                                        padding-left: 40px;
+                                        font-size: 14px;
+                                    }
+
+                                    /* Cart Sidebar Mobile Dark Mode Overrides */
+                                    #cartSidebarMobile .list-group-item {
+                                        background-color: #1a1a1a;
+                                        border-color: #333;
+                                        color: #fff;
+                                    }
+                                    #cartSidebarMobile .product-name {
+                                        color: #fff;
+                                    }
+                                    #cartSidebarMobile .unit,
+                                    #cartSidebarMobile .item-price,
+                                    #cartSidebarMobile .attr-inline {
+                                        color: #ccc;
+                                    }
+                                    #cartSidebarMobile .btn-outline-brand {
+                                        color: #fff;
+                                        border-color: #fff;
+                                    }
+                                    #cartSidebarMobile .btn-outline-brand:hover {
+                                        background-color: #fff;
+                                        color: #000;
+                                    }
+                                    #cartSidebarMobile .qty-input {
+                                        background-color: #333;
+                                        border-color: #444;
+                                        color: #fff;
+                                    }
+                                    #cartSidebarMobile .subtotal-left,
+                                    #cartSidebarMobile .subtotal-right {
+                                        color: #fff;
+                                        font-weight: bold;
+                                    }
+                                    #cartSidebarMobile .cart-footer .btn {
+                                        background-color: #fff;
+                                        color: #000;
+                                        border: 1px solid #fff;
+                                        margin-bottom: 10px;
+                                        width: 100%;
+                                        display: block;
+                                        text-align: center;
+                                    }
+                                    #cartSidebarMobile .cart-footer .btn:hover {
+                                        background-color: #ddd;
+                                    }
+                                    #cartSidebarMobile p {
+                                        color: #fff;
                                     }
                                 </style>
                             </nav>
                         </div>
 
-                        <div class="mobile-header-logo d-block d-lg-none w-100 text-center">
-                            <a href="{{ route('welcome') }}" style="display:inline-block;">
-                                <img src="{{ asset('img/palma/logopalma.png') }}" alt="PalmataHat">
+                        <div class="mobile-header-bar d-flex d-lg-none align-items-center justify-content-between w-100">
+                            <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Menu">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            
+                            <a href="{{ route('welcome') }}" class="mx-auto">
+                                <img src="{{ asset('img/palma/logopalma.png') }}" alt="PalmataHat" style="height: 50px; width: auto;" decoding="async" fetchpriority="high">
                             </a>
+                            
+                            <div class="header-right-mobile d-flex align-items-center">
+                                <div class="card-stor tab-cart" style="width: 40px; height: 40px; background-color: #7d716c;">
+                                    <img src="{{ asset('img/gallery/card.svg') }}" alt="" style="width: 20px; filter: brightness(0) invert(1);">
+                                    <span id="cartCountMobileTop" class="badge-counter" style="position: absolute; top: -5px; right: -5px; background: #dc3545; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; display: flex; align-items: center; justify-content: center;">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Menu Sidebar -->
+                        <div id="mobileMenuSidebar" class="mobile-menu-sidebar d-lg-none">
+                            <div style="padding: 20px; border-bottom: 1px solid #333; display: flex; justify-content: space-between; align-items: center;">
+                                <h4 class="font-weight-bold" style="color: #ffffff; margin: 0;">Menu</h4>
+                                <button id="closeMobileMenu" style="background: none; border: none; font-size: 24px; color: #ffffff;">&times;</button>
+                            </div>
+                            <div style="padding: 0; flex: 1; overflow-y: auto;">
+                                <ul>
+                                <li><a href="{{ route('welcome') }}">Accueil</a></li>
+                                <li>
+                                    <a href="#" class="submenu-toggle-btn">Catalogue <i class="fas fa-chevron-down submenu-toggle"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="{{ route('shop') }}">Tous les produits</a></li>
+                                        @php($menuCategories = \App\Models\Category::orderBy('name')->get())
+                                        @foreach($menuCategories as $cat)
+                                        <li><a href="{{ route('shop') }}?category={{ $cat->slug }}">{{ $cat->name }}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="submenu-toggle-btn">Panama Hat <i class="fas fa-chevron-down submenu-toggle"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="{{ route('about.montecristi') }}">Chapeaux Montecristi</a></li>
+                                        <li><a href="{{ route('about.bandes') }}">Bandes pour chapeaux</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="submenu-toggle-btn">Histoire et Héritage <i class="fas fa-chevron-down submenu-toggle"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="{{ route('about.histoire') }}">Mon histoire</a></li>
+                                        <li><a href="{{ route('about.origine') }}">Origine du Panama Haut</a></li>
+                                        <li><a href="{{ route('about.processus') }}">Processus</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="submenu-toggle-btn">Service à la clientèle <i class="fas fa-chevron-down submenu-toggle"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="{{ route('about.faq') }}">Questions fréquentes</a></li>
+                                        <li><a href="{{ route('about.comment-commander') }}">COMMENT COMMANDER</a></li>
+                                        <li><a href="{{ route('about.art-porter-preserver') }}">Lart de porter et préserver votre panama</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{ route('contact') }}">Contact</a></li>
+                                
+                                @guest
+                                <li><a href="{{ route('login') }}">Se connecter</a></li>
+                                <li><a href="{{ route('register') }}">Créer un compte</a></li>
+                                @else
+                                <li><a href="{{ route('home') }}">Profil</a></li>
+                                <li><a href="{{ route('orders.index') }}">Mes commandes</a></li>
+                                @if(Auth::user()->role === 'admin')
+                                <li><a href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
+                                @endif
+                                <li>
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-mobile').submit();">Se déconnecter</a>
+                                    <form id="logout-form-mobile" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </li>
+                                @endguest
+                            </ul>
+                            </div>
                         </div>
 
                     </div>
@@ -878,86 +932,7 @@
         </div>
     </header>
 
-    <nav class="mobile-tabbar d-lg-none">
-        <a href="{{ route('welcome') }}" class="tab-item tab-home {{ request()->routeIs('welcome') ? 'active' : '' }}" aria-label="Accueil">
-            <i class="fas fa-home"></i>
-            <span>Accueil</span>
-        </a>
-        <a href="{{ route('shop') }}" class="tab-item tab-shop {{ request()->routeIs('shop') ? 'active' : '' }}" aria-label="Catalogue">
-            <i class="fas fa-store"></i>
-            <span>Catalogue</span>
-        </a>
-        <button type="button" class="tab-item tab-hat {{ request()->routeIs('about*') ? 'active' : '' }}" aria-label="Panama Hat">
-            <i class="fas fa-hat-cowboy"></i>
-            <span><b>Panama</b></span>
-        </button>
-        @guest
-        <button type="button" class="tab-item tab-account {{ request()->routeIs('login') || request()->routeIs('register') ? 'active' : '' }}" aria-label="Compte">
-            <i class="fas fa-user"></i>
-            <span>Compte</span>
-        </button>
-        @else
-        @php($isAdmin = Auth::user()->role === 'admin')
-        <button type="button" class="tab-item tab-account {{ request()->routeIs('orders*') || request()->routeIs('home') || request()->routeIs('admin.orders*') ? 'active' : '' }}" aria-label="Compte">
-            <i class="fas fa-user-check"></i>
-            <span>Compte</span>
-        </button>
-        @endguest
-        <button type="button" class="tab-item tab-cart" aria-label="Panier">
-            <i class="fas fa-shopping-bag"></i>
-            <span>Panier</span>
-            <span class="badge" id="cartCountMobileTab">0</span>
-        </button>
-    </nav>
-
-    <div id="mobileMenuOverlay" class="mobile-sheet__overlay d-lg-none" aria-hidden="true"></div>
-    <div id="mobileMenuSheet" class="mobile-sheet d-lg-none" role="dialog" aria-modal="true" aria-labelledby="mobileMenuTitle" tabindex="-1">
-        <div class="mobile-sheet__content">
-            <div class="mobile-sheet__handle"></div>
-            <div class="d-flex justify-content-between align-items-center mb-2 px-2">
-                <strong id="mobileMenuTitle" style="color:#fff;"><b>Panama</b></strong>
-                <button id="mobileMenuClose" aria-label="Fermer le menu"
-                    style="background:none;border:none;color:#fff;font-size:24px;line-height:1;min-width:44px;min-height:44px;">&times;</button>
-            </div>
-            <ul class="list-unstyled m-0 p-0">
-                <li><a class="{{ request()->routeIs('about.montecristi') ? 'active' : '' }}" href="{{ route('about.montecristi') }}">Chapeaux Montecristi</a></li>
-                <li><a class="{{ request()->routeIs('about.histoire') ? 'active' : '' }}" href="{{ route('about.histoire') }}">Mon histoire</a></li>
-                <li><a class="{{ request()->routeIs('about.bandes') ? 'active' : '' }}" href="{{ route('about.bandes') }}">Bandes pour chapeaux</a></li>
-                <li><a class="{{ request()->routeIs('about.origine') ? 'active' : '' }}" href="{{ route('about.origine') }}">Origine du <b>Panama Haut</b></a></li>
-                <li><a class="{{ request()->routeIs('about.processus') ? 'active' : '' }}" href="{{ route('about.processus') }}">Service à la clientèle</a></li>
-                <li><a class="{{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="mobileAccountSheet" class="mobile-sheet d-lg-none" role="dialog" aria-modal="true" aria-labelledby="mobileAccountTitle" tabindex="-1">
-        <div class="mobile-sheet__content">
-            <div class="mobile-sheet__handle"></div>
-            <div class="d-flex justify-content-between align-items-center mb-2 px-2">
-                <strong id="mobileAccountTitle" style="color:#fff;">Compte</strong>
-                <button id="mobileAccountClose" aria-label="Fermer le compte"
-                    style="background:none;border:none;color:#fff;font-size:24px;line-height:1;min-width:44px;min-height:44px;">&times;</button>
-            </div>
-            <ul class="list-unstyled m-0 p-0">
-                @guest
-                <li><a class="{{ request()->routeIs('login') ? 'active' : '' }}" href="{{ route('login') }}">Se connecter</a></li>
-                <li><a class="{{ request()->routeIs('register') ? 'active' : '' }}" href="{{ route('register') }}">Créer un compte</a></li>
-                @else
-                <li><a class="{{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Profil</a></li>
-                <li><a class="{{ request()->routeIs('orders*') ? 'active' : '' }}" href="{{ route('orders.index') }}">Mes commandes</a></li>
-                @if(Auth::user()->role === 'admin')
-                <li><a class="{{ request()->routeIs('admin.*') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
-                @endif
-                <li>
-                    <form method="POST" action="{{ route('logout') }}" style="margin:0;">
-                        @csrf
-                        <button type="submit" style="display:block;width:100%;text-align:left;padding:14px 16px;color:#fff;background:#111111;border:1px solid #222222;border-radius:10px;">Se déconnecter</button>
-                    </form>
-                </li>
-                @endguest
-            </ul>
-        </div>
-    </div>
+    <!-- Mobile menu elements removed -->
 
 
     <main>
@@ -966,13 +941,13 @@
             <div class="slider-area">
                 <!-- Mobile cart offcanvas available globally for mobile -->
                 <div id="cartSidebarMobile"
-                    style="position:fixed;top:0;right:0;bottom:0;width:100vw;height:100vh;background:#fff;color:#000;z-index:10000;display:flex;flex-direction:column;">
+                    style="position:fixed;top:0;right:0;bottom:0;width:100vw;height:100vh;background:#000000;color:#ffffff;z-index:10000;display:flex;flex-direction:column;">
                     <div
-                        style="padding:20px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;">
-                        <h4 class="font-weight-bold" style="color:#7d716c;">Mon Panier</h4>
+                        style="padding:20px;border-bottom:1px solid #333;display:flex;justify-content:space-between;align-items:center;">
+                        <h4 class="font-weight-bold" style="color:#ffffff;">Mon Panier</h4>
                         <button id="closeCartMobile"
-                            style="background:none;border:none;font-size:24px;color:#7d716c;"
-                            class="text-dark">&times;</button>
+                            style="background:none;border:none;font-size:24px;color:#ffffff;"
+                            class="text-white">&times;</button>
                     </div>
                     <div id="cartContentMobile" style="padding:20px;flex:1;overflow-y:auto;">
                     </div>
@@ -991,7 +966,7 @@
             <div class="container">
                 <div class="footer-main d-flex align-items-center justify-content-center">
                     <div class="footer-logo mr-3">
-                        <a href="{{ route('welcome') }}"><img src="{{ asset('img/palma/logopalma.png') }}" alt="PalmataHat" style="height:56px;width:auto;"></a>
+                        <a href="{{ route('welcome') }}"><img src="{{ asset('img/palma/logopalma.png') }}" alt="PalmataHat" style="height:56px;width:auto;" loading="lazy" decoding="async"></a>
                     </div>
                     <ul class="footer-links m-0 p-0 d-flex">
                         <li><a href="{{ route('welcome') }}">Accueil</a></li>
@@ -1040,39 +1015,21 @@
     <script>
         // Usar jQuery en lugar de $ para evitar conflictos
         jQuery(document).ready(function($) {
-            function openSheet(selector) {
-                $(selector).addClass('open');
-                $('#mobileMenuOverlay').addClass('open');
-                $('body').addClass('sheet-opened');
-                setTimeout(function() {
-                    $(selector).focus();
-                }, 10);
-            }
+            // Lógica del nuevo menú móvil
+            $('#mobileMenuBtn').on('click', function(e) {
+                e.preventDefault();
+                $('#mobileMenuSidebar').addClass('open');
+            });
 
-            function closeSheets() {
-                $('#mobileMenuSheet, #mobileAccountSheet').removeClass('open');
-                $('#mobileMenuOverlay').removeClass('open');
-                $('body').removeClass('sheet-opened');
-            }
-            $('.tab-hat').on('click', function() {
-                openSheet('#mobileMenuSheet');
+            $('#closeMobileMenu').on('click', function(e) {
+                e.preventDefault();
+                $('#mobileMenuSidebar').removeClass('open');
             });
-            $('.tab-account').on('click', function() {
-                openSheet('#mobileAccountSheet');
-            });
-            $('#mobileMenuClose, #mobileAccountClose, #mobileMenuOverlay').on('click', function() {
-                closeSheets();
-            });
-            $(document).on('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    closeSheets();
-                }
-            });
-            $(document).on('mousedown', function(e) {
-                const openAny = $('#mobileMenuSheet').hasClass('open') || $('#mobileAccountSheet').hasClass('open');
-                if (openAny && !$(e.target).closest('#mobileMenuSheet, #mobileAccountSheet, .tab-hat, .tab-account').length) {
-                    closeSheets();
-                }
+
+            $('.submenu-toggle-btn').on('click', function(e) {
+                e.preventDefault();
+                $(this).next('.submenu').slideToggle();
+                $(this).find('.submenu-toggle').toggleClass('fa-chevron-down fa-chevron-up');
             });
             $('.tab-cart').on('click', function() {
                 refreshCart();

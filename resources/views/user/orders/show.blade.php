@@ -2,16 +2,16 @@
 
 @section('content')
 <div class="container py-4">
-    <h2>Pedido #{{ $order->id }}</h2>
-    <div class="mb-3">Estado: <strong>{{ $order->status }}</strong></div>
-    <h4>Items</h4>
+    <h2>Commande #{{ $order->id }}</h2>
+    <div class="mb-3">Statut: <strong>{{ $order->status }}</strong></div>
+    <h4>Articles</h4>
     <table class="table">
         <thead>
             <tr>
-                <th>Producto</th>
-                <th>Cantidad</th>
-                <th>Precio</th>
-                <th>Subtotal</th>
+                <th>Produit</th>
+                <th>Quantité</th>
+                <th>Prix</th>
+                <th>Sous-total</th>
             </tr>
         </thead>
         <tbody>

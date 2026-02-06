@@ -20,7 +20,7 @@ Route::get('/product/{slug}', [WelcomeController::class, 'productShow'])->name('
 //ruta contact
 Route::get('/contact', [WelcomeController::class, 'contact'])->name('contact');
 //ruta about
-Route::get('/about', [WelcomeController::class, 'about'])->name('about');
+// Route::get('/about', [WelcomeController::class, 'processus'])->name('about.processus');
 
 // Rutas para los submenús de "Panama Hat"
 Route::get('/montecristi', [WelcomeController::class, 'montecristi'])->name('about.montecristi');
@@ -70,6 +70,9 @@ Route::post('/checkout', [CheckoutController::class, 'process'])->name('checkout
 Route::middleware('auth')->group(function () {
     Route::get('/orders', [UserOrderController::class, 'index'])->name('orders.index');
     Route::get('/orders/{order}', [UserOrderController::class, 'show'])->name('orders.show');
+});
+Route::fallback(function () {
+    return redirect('/');
 });
 
 // Panel de administrador (archivo separado)

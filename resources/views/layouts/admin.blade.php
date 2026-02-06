@@ -51,7 +51,7 @@
     <header class="admin-header py-2">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div class="brand">
-                <a href="{{ route('welcome') }}"><img src="{{ asset('img/palma/logopalma.png') }}" alt="PalmataHat"></a>
+                <a href="{{ route('welcome') }}"><img src="{{ asset('img/palma/logopalma.png') }}" alt="PalmataHat" decoding="async" fetchpriority="high"></a>
                 <strong>Panel Administrateur</strong>
             </div>
             <nav class="d-flex align-items-center">
@@ -75,8 +75,8 @@
                 <li><a href="{{ route('admin.orders.index') }}" class="{{ request()->routeIs('admin.orders*') ? 'active' : '' }}"><i class="fas fa-shopping-bag"></i><span>Commandes</span></a></li>
                 <li><a href="{{ route('admin.clients.index') }}" class="{{ request()->routeIs('admin.clients*') ? 'active' : '' }}"><i class="fas fa-user"></i><span>Clients</span></a></li>
                 <li><a href="{{ route('admin.admins.index') }}" class="{{ request()->routeIs('admin.admins*') ? 'active' : '' }}"><i class="fas fa-user-shield"></i><span>Administrateurs</span></a></li>
-                <li><a href="{{ route('admin.attributes.index') }}" class="{{ request()->routeIs('admin.attributes*') ? 'active' : '' }}"><i class="fas fa-sliders-h"></i><span>Atributos</span></a></li>
-                <li><a href="{{ route('admin.settings.edit') }}" class="{{ request()->routeIs('admin.settings*') ? 'active' : '' }}"><i class="fas fa-cog"></i><span>Configuración</span></a></li>
+                <li><a href="{{ route('admin.attributes.index') }}" class="{{ request()->routeIs('admin.attributes*') ? 'active' : '' }}"><i class="fas fa-sliders-h"></i><span>Attributs</span></a></li>
+                <li><a href="{{ route('admin.settings.edit') }}" class="{{ request()->routeIs('admin.settings*') ? 'active' : '' }}"><i class="fas fa-cog"></i><span>Configuration</span></a></li>
             </ul>
         </aside>
         <main class="admin-content">

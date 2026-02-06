@@ -16,20 +16,20 @@
             @php($fallback = $product->image_path ? asset($product->image_path) : asset('img/palma/cats/cat2.svg'))
             @php($firstImage = $cover ? asset($cover->path) : $fallback)
             <div class="card p-2 gallery-card">
-                <a href="{{ $cover ? asset($cover->path) : $fallback }}" class="d-block position-relative main-image-wrap" id="mainImageLink" aria-label="Ver imagen en pantalla completa">
-                    <img id="mainImage" src="{{ $firstImage }}" alt="{{ $product->name }}">
-                    <span class="expand-badge"><i class="fas fa-expand"></i><span>Ampliar</span></span>
+                <a href="{{ $cover ? asset($cover->path) : $fallback }}" class="d-block position-relative main-image-wrap" id="mainImageLink" aria-label="Voir l'image en plein écran">
+                    <img id="mainImage" src="{{ $firstImage }}" alt="{{ $product->name }}" fetchpriority="high" decoding="async">
+                    <span class="expand-badge"><i class="fas fa-expand"></i><span>Agrandir</span></span>
                 </a>
                 @php($thumbs = $images->count() ? $images : collect([$cover])->filter())
-                <div class="d-flex flex-wrap mt-2" id="thumbs" role="list" aria-label="Miniaturas" style="gap:10px;">
+                <div class="d-flex flex-wrap mt-2" id="thumbs" role="list" aria-label="Miniatures" style="gap:10px;">
                     @foreach($images->count() ? $images : collect([]) as $img)
                     <div class="thumb" data-src="{{ asset($img->path) }}" data-full="{{ asset($img->path) }}">
-                        <img src="{{ asset($img->path) }}" alt="">
+                        <img src="{{ asset($img->path) }}" alt="" loading="lazy" decoding="async">
                     </div>
                     @endforeach
                     @if(!$images->count())
                     <div class="thumb" data-src="{{ $firstImage }}" data-full="{{ $firstImage }}">
-                        <img src="{{ $firstImage }}" alt="">
+                        <img src="{{ $firstImage }}" alt="" loading="lazy">
                     </div>
                     @endif
                 </div>
@@ -58,7 +58,7 @@
                             </label>
                             @endforeach
                             @if($optsCount>1)
-                            <a href="#" class="ms-2 text-decoration-underline" data-clear="attr_multi[{{ (int)$aid }}][]">Limpiar</a>
+                            <a href="#" class="ms-2 text-decoration-underline" data-clear="attr_multi[{{ (int)$aid }}][]">Effacer</a>
                             @endif
                         @else
                             @foreach($opts as $label)
@@ -68,7 +68,7 @@
                             </label>
                             @endforeach
                             @if($optsCount>1)
-                            <a href="#" class="ms-2 text-decoration-underline" data-clear="attr[{{ (int)$aid }}]">Limpiar</a>
+                            <a href="#" class="ms-2 text-decoration-underline" data-clear="attr[{{ (int)$aid }}]">Effacer</a>
                             @endif
                         @endif
                     </div>
@@ -79,17 +79,17 @@
             @endif
 
             <div class="mt-3">
-                <label for="quantityInput" class="form-label" style="color:#000;">Cantidad</label>
+                <label for="quantityInput" class="form-label" style="color:#000;">Quantité</label>
                 <div class="input-group" style="max-width:120px;">
-                    <button class="btn btn-outline-secondary btn-sm qty-btn" type="button" id="qtyMinus" aria-label="Disminuir">−</button>
-                    <input id="quantityInput" type="number" min="1" value="1" class="form-control text-center" style="width:50px;" aria-label="Cantidad">
-                    <button class="btn btn-outline-secondary btn-sm qty-btn" type="button" id="qtyPlus" aria-label="Aumentar">+</button>
+                    <button class="btn btn-outline-secondary btn-sm qty-btn" type="button" id="qtyMinus" aria-label="Diminuer">−</button>
+                    <input id="quantityInput" type="number" min="1" value="1" class="form-control text-center" style="width:50px;" aria-label="Quantité">
+                    <button class="btn btn-outline-secondary btn-sm qty-btn" type="button" id="qtyPlus" aria-label="Augmenter">+</button>
                 </div>
             </div>
 
             <div class="mt-3 mb-1 d-flex w-100" style="gap:12px;">
-                <button class="btn btn-brand" id="addToCartBtn" data-product-id="{{ (int)$product->id }}" style="flex:1;">Añadir al carrito</button>
-                <button class="btn btn-outline-secondary" id="checkoutBtn" aria-label="Comprar ahora" style="flex:1;">Comprar ahora</button>
+                <button class="btn btn-brand" id="addToCartBtn" data-product-id="{{ (int)$product->id }}" style="flex:1;">Ajouter au panier</button>
+                <button class="btn btn-outline-secondary" id="checkoutBtn" aria-label="Acheter maintenant" style="flex:1;">Acheter maintenant</button>
             </div>
 
             <div class="mt-3" id="addToCartFeedback" role="alert" aria-live="polite"></div>
@@ -99,7 +99,7 @@
     @php($related = (isset($related) ? $related : \App\Models\Product::where('category_id',$product->category_id)->where('id','!=',$product->id)->take(4)->get()))
     @if($related && $related->count())
     <div class="mt-5">
-        <h2 class="h5" style="color:#000;">Productos relacionados</h2>
+        <h2 class="h5" style="color:#000;">Produits similaires</h2>
         <div class="row g-3">
             @foreach($related as $rp)
             @php($rc = $rp->coverImage())
@@ -672,6 +672,38 @@
     #thumbs .thumb.active {
         border-color: #7d716c;
         box-shadow: 0 0 0 2px rgba(125, 113, 108, 0.25);
+    }
+    
+    /* Responsive Typography */
+    .responsive-title, .section-tittle h2, h1, h2 {
+        font-size: 50px !important;
+        text-align: center !important;
+        font-weight: 700;
+        color: black;
+    }
+    h3, h4 {
+        font-size: 18pt !important;
+    }
+    
+    .responsive-text, p, .pera {
+        font-size: 12pt !important;
+        text-align: justify;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .responsive-title, .section-tittle h2, h1, h2 {
+            font-size: 30px !important;
+        }
+        h3, h4 {
+            font-size: 16pt !important;
+        }
+        .responsive-text, p, .pera {
+            font-size: 12pt !important;
+            text-align: left;
+            line-height: 1.6;
+        }
     }
 </style>
 

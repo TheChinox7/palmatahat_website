@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container py-4">
-    <h2>Carrito</h2>
+    <h2>Panier</h2>
     @php $currency = $currencySymbol ?? '$'; @endphp
     @if(empty($cart))
-        <p>Tu carrito está vacío.</p>
+        <p>Votre panier est vide.</p>
     @else
     <div class="row g-4">
         <div class="col-md-8">
@@ -13,10 +13,10 @@
                 <thead>
                     <tr>
                         <th style="width:44px"></th>
-                        <th>Producto</th>
-                        <th class="text-right">Precio</th>
-                        <th class="text-center">Cantidad</th>
-                        <th class="text-right">Subtotal</th>
+                        <th>Produit</th>
+                        <th class="text-right">Prix</th>
+                        <th class="text-center">Quantité</th>
+                        <th class="text-right">Sous-total</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,11 +36,11 @@
                     @endphp
                     <tr class="cart-row" data-product-id="{{ (int)$item['product_id'] }}" data-price="{{ (float)$item['price'] }}">
                         <td class="text-center align-middle">
-                            <button type="button" class="cart-remove-btn js-remove" data-product-id="{{ (int)$item['product_id'] }}" aria-label="Eliminar">&times;</button>
+                            <button type="button" class="cart-remove-btn js-remove" data-product-id="{{ (int)$item['product_id'] }}" aria-label="Supprimer">&times;</button>
                         </td>
                         <td>
                             <div class="d-flex" style="gap:12px;align-items:flex-start;">
-                                <img src="{{ $item['image_path'] ? asset($item['image_path']) : asset('img/palma/cats/cat2.svg') }}" alt="{{ $item['name'] }}" class="cart-img">
+                                <img src="{{ $item['image_path'] ? asset($item['image_path']) : asset('img/palma/cats/cat2.svg') }}" alt="{{ $item['name'] }}" class="cart-img" loading="lazy" decoding="async">
                                 <div>
                                     <div class="product-name">{{ $item['name'] }}</div>
                                     @foreach($attrPairs as $pair)
@@ -65,19 +65,19 @@
         </div>
         <div class="col-md-4">
             <div class="cart-summary">
-                <div class="summary-title">Totales del carrito</div>
+                <div class="summary-title">Total du panier</div>
                 <hr>
                 <div class="d-flex justify-content-between">
-                    <div>Subtotal</div>
+                    <div>Sous-total</div>
                     <div>{{ $currency }} <span id="cartTotal">{{ number_format($total,2) }}</span></div>
                 </div>
-                <div class="mt-2 text-muted">Envío gratis dentro de Ecuador</div>
-                <div class="mt-1 text-muted">Shipping to Azuay.</div>
-                <div class="mt-1"><a href="#">Change address</a></div>
+                <div class="mt-2 text-muted">Livraison gratuite en Équateur</div>
+                <div class="mt-1 text-muted">Livraison à Azuay.</div>
+                <div class="mt-1"><a href="#">Changer d'adresse</a></div>
                 <div class="mt-3 cart-actions">
-                    <a href="{{ route('checkout.show') }}" class="btn btn-brand">Proceed to checkout</a>
-                    <a href="{{ route('shop') }}" class="btn btn-brand">Continue shopping</a>
-                    <button class="btn btn-brand" onclick="clearCart()">Clear shopping cart</button>
+                    <a href="{{ route('checkout.show') }}" class="btn btn-brand">Passer à la caisse</a>
+                    <a href="{{ route('shop') }}" class="btn btn-brand">Continuer mes achats</a>
+                    <button class="btn btn-brand" onclick="clearCart()">Vider le panier</button>
                 </div>
             </div>
         </div>
@@ -144,6 +144,18 @@
 </script>
 
 <style>
+h2, h1 {
+    font-size: 50px !important;
+    text-align: center !important;
+}
+p {
+    font-size: 12pt !important;
+}
+@media (max-width: 768px) {
+    h2, h1 {
+        font-size: 30px !important;
+    }
+}
 .cart-img{width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid #eee}
 .product-name{text-transform:uppercase;font-weight:600}
 .attr-row{font-size:13px;color:#000}

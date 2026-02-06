@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-    <h2 class="mb-3">Créer administrateur</h2>
+    <h2 class="mb-3">Nouvel administrateur</h2>
     <form method="POST" action="{{ route('admin.admins.store') }}" class="card p-3">
         @csrf
         <div class="row g-3">

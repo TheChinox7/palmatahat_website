@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center" style="font-size: 1.6rem; color: black;">
+                    <ol class="breadcrumb justify-content-center" style="font-size: 12pt; color: black;">
                         <li class="breadcrumb-item"><a href="{{ route('welcome') }}" style="color: black;">Accueil</a></li>
                         <li class="breadcrumb-item"><a style="color: black;">Processus</a></li>
                     </ol>
@@ -21,15 +21,15 @@
             <div class="col-lg-10">
                 <!-- Title -->
                 <div class="text-center mb-5 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
-                    <h2 class="mb-3 responsive-title">Processus et élaboration des <b>chapeaux de paille "toquilla"</b></h2>
+                    <h2 class="mb-3 responsive-title">Processus et élaboration des chapeaux de paille "toquilla"</h2>
                 </div>
 
                 <!-- Intro Section -->
                 <div class="row align-items-center mb-5">
                     <div class="col-md-6 order-2 order-md-1 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="section-tittle mb-30 pt-10">
-                            <p class="pera responsive-text" style="color: black;">Les <b>chapeaux de paille toquilla</b> sont bien plus
-                                qu'un accessoire, <b>faite à la main</b>, qui ont porté cette ancienne tradition pendant
+                            <p class="pera responsive-text" style="color: black;">Les chapeaux de paille toquilla sont bien plus
+                                qu'un accessoire, faite à la main, qui ont porté cette ancienne tradition pendant
                                 plusieurs années en faisant connaître au monde entier.
                                 <br>
                                 Ce savoir-faire a été reconnu par L'Unesco comme Patrimoine culturel immatériel de
@@ -39,7 +39,7 @@
                                 programme pour sa conservation future est maintenu, encourageant les jeunes à poursuivre
                                 cet héritage qui sert de subsistance économique à de nombreuses familles où chacun en
                                 profite de manière différente. C'est pourquoi, en tant que promoteurs du marché
-                                artisanal, nous sommes fiers de montrer tout le processus que les <b>artisans</b> équatoriens
+                                artisanal, nous sommes fiers de montrer tout le processus que les artisans équatoriens
                                 réalisent pour représenter les chapeaux Fedora classique et lo Montecristi en Suisse.
                             </p>
                         </div>
@@ -47,7 +47,7 @@
                     <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
                         <div class="text-center">
                             <img src="{{ asset('img/palma/popular-imtes1.jpg') }}" alt="Processus de fabrication du chapeau Panama"
-                                class="img-fluid"
+                                class="img-fluid hover-effect" loading="lazy" decoding="async"
                                 style="max-width: 100%; width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                     </div>
@@ -58,19 +58,19 @@
                     <div class="col-md-6 mb-4 mb-md-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
                         <div class="text-center">
                             <img src="{{ asset('img/palma/pajaproce2.png') }}" alt="Matière première paille toquilla"
-                                class="img-fluid"
+                                class="img-fluid hover-effect" loading="lazy" decoding="async"
                                 style="max-width: 100%; width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
                         <div class="section-tittle mb-30 pt-10">
-                            <h3 class="mb-3" style="font-size: 2.4rem; font-weight: 600;">Matière première : la plante de paille toquilla</h3>
+                            <h3 class="mb-3" style="font-weight: 600;">Matière première : la plante de paille toquilla</h3>
                             <p class="pera responsive-text" style="color: black;">
                                 C'est une plante sauvage que l'on trouve à Montecristi Manabi, une ville au climat
                                 subtropical humide qui permet de la cultiver et la recollecte de cette fibre.
                                 C'est une plante herbacée qui pousse de 1,5 à 3 mètres de haut, dont on extrait le tendre
-                                bourgeon ou partie intérieure des feuilles, idéal pour l'élaboration du <b>chapeau de
-                                    Panama</b>.
+                                bourgeon ou partie intérieure des feuilles, idéal pour l'élaboration du chapeau de
+                                Panama.
                             </p>
                         </div>
                     </div>
@@ -80,34 +80,34 @@
                 <div class="row justify-content-center mb-5">
                     <div class="col-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="section-tittle mb-30">
-                            <h3 class="mb-4 text-center" style="font-size: 2.4rem; font-weight: 600;">Informations importantes</h3>
+                            <h3 class="mb-4 text-center" style="font-weight: 600;">Informations importantes</h3>
                             <div class="row">
                                 <div class="col-md-6">
                                     <p class="pera responsive-text" style="color: black;">
-                                        <u>Récolte responsable:</u> Les <b>artisans</b> ne coupent pas la plante entière elle
+                                        Récolte responsable: Les artisans ne coupent pas la plante entière elle
                                         n'est pas déboisée, l'agriculteur extrait soigneusement les bourgeons appropriés, Sans
                                         nuire à la repousse naturelle.
                                     </p>
                                     <p class="pera responsive-text" style="color: black;">
-                                        <u>Sélection de la Fibre:</u> La tige doit être séparée afin de récupérer le cœur, le
+                                        Sélection de la Fibre: La tige doit être séparée afin de récupérer le cœur, le
                                         centre du bourgeon à partir duquel les meilleurs fils et le plus fin seront
                                         sélectionnés. Cette sélection garantit la qualité et la finesse du tissage.
                                     </p>
                                     <p class="pera responsive-text" style="color: black;">
-                                        <u>Cuisson de la paille de toquilla:</u> Une fois sélectionner les brins, dans un four à
+                                        Cuisson de la paille de toquilla: Une fois sélectionner les brins, dans un four à
                                         bois, vous nouez la paille de toquilla et vous la plongez dans de l'eau bouillante
                                         pendant 30 secondes, cela permet d'établisse la couleur beige de la fibre.
                                     </p>
                                 </div>
                                 <div class="col-md-6">
                                     <p class="pera responsive-text" style="color: black;">
-                                        <u>Séchage au Soleil:</u> Les fibres doivent sécher naturellement, au soleil, ce qui
+                                        Séchage au Soleil: Les fibres doivent sécher naturellement, au soleil, ce qui
                                         permet d'évacuer l'humidité, d'assouplir la matière, et de la rendre prête pour le
                                         tissage. Une fois que la fibre est sèche, elle est mise dans un four à bois, où elle est
                                         fumée au soufre pendant 12 heures pour blanchir un peu plus la paille de toquilla.
                                     </p>
                                     <p class="pera responsive-text" style="color: black;">
-                                        <u>Le début de tissage la basse de chapeau:</u> Tout commence par la création d'un
+                                        Le début de tissage la basse de chapeau: Tout commence par la création d'un
                                         gabarit à l'aide des 8 paires des brins des pailles. La partie supérieure du chapeau
                                         connu par les artisans sous le nom de cangrejito armado marque le point de départ du
                                         tressage. Une fois cette base formée et les placer sur un petit support en bois le
@@ -123,7 +123,7 @@
                 <div class="row justify-content-center mb-5">
                     <div class="col-12 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
                         <img src="{{ asset('img/palma/o2.jpg') }}"
-                            alt="Processus de fabrication du chapeau Panama" class="img-fluid"
+                            alt="Processus de fabrication du chapeau Panama" class="img-fluid hover-effect" loading="lazy" decoding="async"
                             style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                     </div>
                 </div>
@@ -133,21 +133,21 @@
                     <div class="col-md-6 order-2 order-md-1 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
                         <div class="section-tittle mb-30 pt-10">
                             <p class="pera responsive-text" style="color: black;">
-                                <strong>Fermeture de bord:</strong> Le bord du chapeau est soigneusement terminé, les
+                                Fermeture de bord: Le bord du chapeau est soigneusement terminé, les
                                 parties avant et arrière sont ajustées pour donner une symétrie parfaite à l'Ala, le
                                 bord donnant chaque style.
                                 <br><br>
-                                <strong>Découper de bord et des fils:</strong> Les extrémités sont coupées à environ 10
+                                Découper de bord et des fils: Les extrémités sont coupées à environ 10
                                 cm de bord, ce qui affine la forme de chapeau et élimine les irrégularités.
                                 <br><br>
-                                <strong>Lavage délicat:</strong> Chaque chapeau est lavé à la main avec de l'eau tiède
+                                Lavage délicat: Chaque chapeau est lavé à la main avec de l'eau tiède
                                 et du savon neutre, afin d'enlever les résidus accumulés pendant le tissage.
                                 <br><br>
-                                <strong>Blanchissement au soufre:</strong> Le chapeau est placé dans un four à bois avec
+                                Blanchissement au soufre: Le chapeau est placé dans un four à bois avec
                                 du soufre pendant 12 heures. Ce procédé permet de stabiliser sa couleur beige naturelle
                                 avant la finition.
                                 <br><br>
-                                <strong>Séchage complet:</strong> Les chapeaux sont ensuite séchés à l'air libre, dans
+                                Séchage complet: Les chapeaux sont ensuite séchés à l'air libre, dans
                                 un espace sec et ventilé pour garantir leur durabilité.
                             </p>
                         </div>
@@ -155,7 +155,7 @@
                     <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
                         <div class="text-center">
                             <img src="{{ asset('img/palma/o4.jpg') }}"
-                                alt="Processus de fabrication du chapeau Panama" class="img-fluid"
+                                alt="Processus de fabrication du chapeau Panama" class="img-fluid hover-effect" loading="lazy" decoding="async"
                                 style="max-width: 100%; width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                     </div>
@@ -169,12 +169,12 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-10">
                                     <p class="pera responsive-text" style="color: black;">
-                                        <u>Battue en brèche:</u> Pour rendre la texture plus souple, chaque chapeau est battu
+                                        Battue en brèche: Pour rendre la texture plus souple, chaque chapeau est battu
                                         délicatement au moins 5 fois avec un pot en bois contenant un peu de soufre. Ce geste
                                         doit être fait avec précaution pour ne pas abîmer les fibres.
                                     </p>
                                     <p class="pera responsive-text" style="color: black;">
-                                        <u>Repassage:</u> Enfin, le chapeau est posé sur un support en bois de balsa puis une
+                                        Repassage: Enfin, le chapeau est posé sur un support en bois de balsa puis une
                                         bande de cuir est serrée autour de la couronne. Cela permet de repasser et structurer la
                                         partie appelée Campana, donnant au chapeau sa forme définitive.
                                     </p>
@@ -189,14 +189,14 @@
                     <div class="col-md-6 mb-4 mb-md-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
                         <div class="text-center">
                             <img src="{{ asset('img/palma/o5.jpg') }}"
-                                alt="Processus de fabrication du chapeau Panama" class="img-fluid"
+                                alt="Processus de fabrication du chapeau Panama" class="img-fluid hover-effect" loading="lazy" decoding="async"
                                 style="max-width: 100%; width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
                         <div class="section-tittle mb-30 pt-10">
                             <p class="pera responsive-text" style="color: black;">
-                                <strong>Ruban</strong>
+                                Ruban
                                 <br><br>
                                 La touche finale et distinctive, la pose du ruban ; également appelé bande ou ceinture
                                 et le dernier détail qui rehausse l'élégance et l'unicité de chaque chapeau.
@@ -204,10 +204,10 @@
                                 Nous proposons différents types de ruban en tissu, cuire, crin de cheval et même des
                                 chaînes en argent qui complète parfaitement l'artisanat du chapeau.
                                 <br><br>
-                                <strong>Slogan</strong>
+                                Slogan
                                 <br><br>
-                                A chaque <b>chapeau Panama</b> qui nous proposons incarne la tradition la précision et la
-                                passion, acheter un <b>chapeau Panama</b> c'est acquérir une pièce unique symbole de culture
+                                A chaque chapeau Panama qui nous proposons incarne la tradition la précision et la
+                                passion, acheter un chapeau Panama c'est acquérir une pièce unique symbole de culture
                                 d'élégance et d'engagement pour l'artisanat équatorien.
                             </p>
                         </div>
@@ -230,15 +230,29 @@
 </div>
 
 <style>
-    /* Responsive Typography */
-    .responsive-title {
-        font-size: 3.2rem;
+        /* Hover Effect for Images */
+        .hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-effect:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        /* Responsive Typography */
+        .responsive-title, .section-tittle h2, h1, h2 {
+        font-size: 50px !important;
+        text-align: center !important;
         font-weight: 700;
         color: black;
     }
-
-    .responsive-text {
-        font-size: 1.6rem;
+    h3, h4 {
+        font-size: 18pt !important;
+    }
+    
+    .responsive-text, p, .pera {
+        font-size: 12pt !important;
         text-align: justify;
         line-height: 1.8;
         margin-bottom: 20px;
@@ -246,15 +260,18 @@
 
     @media (max-width: 768px) {
         .breadcrumb {
-            font-size: 1.1rem !important;
+            font-size: 12pt !important;
         }
 
-        .responsive-title {
-            font-size: 2.2rem;
+        .responsive-title, .section-tittle h2, h1, h2 {
+            font-size: 30px !important;
+        }
+        h3, h4 {
+            font-size: 16pt !important;
         }
 
-        .responsive-text {
-            font-size: 1.1rem;
+        .responsive-text, p, .pera {
+            font-size: 12pt !important;
             text-align: left;
             line-height: 1.6;
         }

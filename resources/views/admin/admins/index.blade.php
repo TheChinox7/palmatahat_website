@@ -32,7 +32,7 @@
                     <form action="{{ route('admin.admins.destroy', $user) }}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Supprimer?')">Supprimer</button>
+                        <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Supprimer ?')">Supprimer</button>
                     </form>
                 </td>
             </tr>

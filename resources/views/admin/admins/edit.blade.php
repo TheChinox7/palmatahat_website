@@ -16,7 +16,7 @@
                 <input type="email" name="email" value="{{ $user->email }}" class="form-control" required>
             </div>
             <div class="col-md-6">
-                <label class="form-label">Mot de passe (laisser vide si no cambia)</label>
+                <label class="form-label">Mot de passe (laisser vide pour conserver l'actuel)</label>
                 <input type="password" name="password" class="form-control" placeholder="********">
             </div>
         </div>

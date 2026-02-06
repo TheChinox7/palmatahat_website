@@ -8,7 +8,7 @@
         @php $sum += ((float)$item['price']) * ((int)$item['quantity']); @endphp
         <li class="list-group-item cart-row" style="width:100%;" data-product-id="{{ (int)$item['product_id'] }}" data-price="{{ (float)$item['price'] }}">
             <div class="d-flex align-items-center" style="gap:10px;">
-                <img src="{{ $item['image_path'] ? asset($item['image_path']) : asset('img/palma/cats/cat2.svg') }}" alt="{{ $item['name'] }}" style="width:70px;height:70px;object-fit:cover;border-radius:8px;border:1px solid #eee;">
+                <img src="{{ $item['image_path'] ? asset($item['image_path']) : asset('img/palma/cats/cat2.svg') }}" alt="{{ $item['name'] }}" style="width:70px;height:70px;object-fit:cover;border-radius:8px;border:1px solid #eee;" loading="lazy" decoding="async">
                 <div class="flex-grow-1">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>

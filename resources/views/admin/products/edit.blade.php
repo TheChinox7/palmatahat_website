@@ -61,13 +61,13 @@
         @method('PUT')
         <ul class="nav nav-pills section-tabs" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-info" type="button" role="tab">Información</button>
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-info" type="button" role="tab">Information</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-attrs" type="button" role="tab">Atributos</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-attrs" type="button" role="tab">Attributs</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-images" type="button" role="tab">Imágenes</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-images" type="button" role="tab">Images</button>
             </li>
         </ul>
         <div class="tab-content">
@@ -124,7 +124,7 @@
                                         <span>{{ $opt->label }}</span>
                                     </label>
                                     @endforeach
-                                    <a href="#" class="attr-clear" data-target="attr_select[{{ $attr->id }}]">Limpiar</a>
+                                    <a href="#" class="attr-clear" data-target="attr_select[{{ $attr->id }}]">Effacer</a>
                                 </div>
                                 @elseif($attr->type==='multi_select')
                                 @php($selected = $currentVals->pluck('attribute_option_id')->filter()->map(fn($v)=>(int)$v)->toArray())
@@ -148,9 +148,9 @@
                 <div class="pane-card">
                     <div class="row g-3">
                         <div class="col-12">
-                            <label class="form-label">Imágenes (múltiples)</label>
+                            <label class="form-label">Images</label>
                             <input type="file" name="images[]" id="js-images" class="form-control" multiple>
-                            <small class="text-muted">Puedes subir todas las imágenes que necesites.</small>
+                            <small class="text-muted">Vous pouvez télécharger toutes les images dont vous avez besoin.</small>
                             <div id="js-image-preview" class="preview-grid"></div>
                         </div>
                         <div class="col-12">
@@ -158,9 +158,9 @@
                                 <table class="table table-striped table-hover align-middle table-modern">
                                     <thead>
                                         <tr>
-                                            <th>Portada</th>
-                                            <th>Imagen</th>
-                                            <th>Orden</th>
+                                            <th>Couverture</th>
+                                            <th>Image</th>
+                                            <th>Ordre</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -177,14 +177,14 @@
                                                 <input type="number" class="form-control" name="order[{{ $img->id }}]" value="{{ $img->sort_order }}">
                                             </td>
                                             <td class="text-end">
-                                                <button type="button" class="btn btn-sm btn-outline-danger js-del-image" data-url="{{ route('admin.products.images.destroy', [$product,$img]) }}">Eliminar</button>
+                                                <button type="button" class="btn btn-sm btn-outline-danger js-del-image" data-url="{{ route('admin.products.images.destroy', [$product,$img]) }}">Supprimer</button>
                                             </td>
                                         </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                                 <div class="mt-2">
-                                    <button class="btn btn-outline-secondary btn-sm" name="save_images" value="1">Guardar orden y portada</button>
+                                    <button class="btn btn-outline-secondary btn-sm" name="save_images" value="1">Enregistrer l'ordre et la couverture</button>
                                 </div>
                             </div>
                         </div>
@@ -212,7 +212,7 @@
         });
         document.querySelectorAll('.js-del-image').forEach(function(btn) {
             btn.addEventListener('click', function() {
-                if (!confirm('Eliminar imagen?')) return;
+                if (!confirm('Supprimer l\'image ?')) return;
                 const url = this.getAttribute('data-url');
                 fetch(url, {
                         method: 'POST',

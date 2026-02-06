@@ -17,13 +17,13 @@
         @csrf
         <ul class="nav nav-pills section-tabs" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-info" type="button" role="tab">Información</button>
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-info" type="button" role="tab">Information</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-attrs" type="button" role="tab">Atributos</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-attrs" type="button" role="tab">Attributs</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-images" type="button" role="tab">Imágenes</button>
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-images" type="button" role="tab">Images</button>
             </li>
         </ul>
         <div class="tab-content">
@@ -78,7 +78,7 @@
                                                     <span>{{ $opt->label }}</span>
                                                 </label>
                                             @endforeach
-                                            <a href="#" class="attr-clear" data-target="attr_select[{{ $attr->id }}]">Limpiar</a>
+                                            <a href="#" class="attr-clear" data-target="attr_select[{{ $attr->id }}]">Effacer</a>
                                         </div>
                                     @elseif($attr->type==='multi_select')
                                         @php($selected = collect(old('attr_multi.'.$attr->id, []))->map(fn($v)=>(int)$v)->toArray())
@@ -89,7 +89,7 @@
                                                     <span>{{ $opt->label }}</span>
                                                 </label>
                                             @endforeach
-                                            <a href="#" class="attr-clear" data-target="attr_multi[{{ $attr->id }}][]">Limpiar</a>
+                                            <a href="#" class="attr-clear" data-target="attr_multi[{{ $attr->id }}][]">Effacer</a>
                                         </div>
                                     @endif
                                 </div>
@@ -100,12 +100,11 @@
             </div>
             <div class="tab-pane fade" id="tab-images" role="tabpanel">
                 <div class="pane-card">
-                    <div class="row g-3">
-                        <div class="col-12">
-                            <label class="form-label">Imágenes (múltiples)</label>
-                            <input type="file" name="images[]" id="js-images" class="form-control" multiple>
-                            <small class="text-muted">Puedes subir todas las imágenes que necesites.</small>
-                            <div id="js-image-preview" class="preview-grid"></div>
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <label for="images" class="form-label">Images</label>
+                            <input type="file" name="images[]" id="images" class="dropify" multiple>
+                            <small class="text-muted">Vous pouvez télécharger toutes les images dont vous avez besoin.</small>
                         </div>
                     </div>
                 </div>

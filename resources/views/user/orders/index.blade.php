@@ -2,14 +2,14 @@
 
 @section('content')
 <div class="container py-4">
-    <h2>Mis pedidos</h2>
+    <h2>Mes commandes</h2>
     <table class="table table-striped mt-3">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Estado</th>
+                <th>Statut</th>
                 <th>Total</th>
-                <th>Fecha</th>
+                <th>Date</th>
                 <th></th>
             </tr>
         </thead>
@@ -21,7 +21,7 @@
                 <td>{{ number_format($order->total,2) }}</td>
                 <td>{{ $order->created_at->format('Y-m-d') }}</td>
                 <td class="text-right">
-                    <a href="{{ route('orders.show', $order) }}" class="btn btn-sm btn-secondary">Ver</a>
+                    <a href="{{ route('orders.show', $order) }}" class="btn btn-sm btn-secondary">Voir</a>
                 </td>
             </tr>
             @endforeach
