@@ -439,7 +439,7 @@
                                                 style="width: 100%;">Panama Hat</a>
                                             <ul class="dropdown-menu" style="display: none; position: absolute; left: 0; top: 100%;">
                                                 <li style="width: 100%;"><a href="{{ route('about.montecristi') }}">Chapeaux Montecristi</a></li>
-                                                <li style="width: 100%;"><a href="{{ route('about.bandes') }}">Bandes pour chapeaux</a></li>
+                                                <li style="width: 100%;"><a href="{{ route('about.bandes') }}">Bandes et Accessoires</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -885,7 +885,7 @@
                                     <a href="#" class="submenu-toggle-btn">Panama Hat <i class="fas fa-chevron-down submenu-toggle"></i></a>
                                     <ul class="submenu">
                                         <li><a href="{{ route('about.montecristi') }}">Chapeaux Montecristi</a></li>
-                                        <li><a href="{{ route('about.bandes') }}">Bandes pour chapeaux</a></li>
+                                        <li><a href="{{ route('about.bandes') }}">Bandes et Accessoires</a></li>
                                     </ul>
                                 </li>
                                 <li>
