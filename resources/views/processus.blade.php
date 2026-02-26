@@ -162,38 +162,34 @@
                 </div>
 
                 <!-- Full Width Text: Traitements Finals -->
-                <div class="row justify-content-center mb-5">
-                    <div class="col-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                        <div class="section-tittle mb-30 text-center">
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-6 mb-4 mb-md-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <div class="text-center">
+                            <img src="{{ asset('img/palma/planchado.jpg') }}" alt="Traitements finals"
+                                class="img-fluid hover-effect" loading="lazy" decoding="async"
+                                style="max-width: 100%; width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <div class="section-tittle mb-30 pt-10">
                             <h3 class="mb-4" style="font-size: 2.4rem; font-weight: 600;">Traitements finals pour sa texture et forme</h3>
-                            <div class="row justify-content-center">
-                                <div class="col-lg-10">
-                                    <p class="pera responsive-text" style="color: black;">
-                                        Battue en brèche: Pour rendre la texture plus souple, chaque chapeau est battu
-                                        délicatement au moins 5 fois avec un pot en bois contenant un peu de soufre. Ce geste
-                                        doit être fait avec précaution pour ne pas abîmer les fibres.
-                                    </p>
-                                    <p class="pera responsive-text" style="color: black;">
-                                        Repassage: Enfin, le chapeau est posé sur un support en bois de balsa puis une
-                                        bande de cuir est serrée autour de la couronne. Cela permet de repasser et structurer la
-                                        partie appelée Campana, donnant au chapeau sa forme définitive.
-                                    </p>
-                                </div>
-                            </div>
+                            <p class="pera responsive-text" style="color: black;">
+                                Battue en brèche: Pour rendre la texture plus souple, chaque chapeau est battu
+                                délicatement au moins 5 fois avec un pot en bois contenant un peu de soufre. Ce geste
+                                doit être fait avec précaution pour ne pas abîmer les fibres.
+                            </p>
+                            <p class="pera responsive-text" style="color: black;">
+                                Repassage: Enfin, le chapeau est posé sur un support en bois de balsa puis une
+                                bande de cuir est serrée autour de la couronne. Cela permet de repasser et structurer la
+                                partie appelée Campana, donnant au chapeau sa forme définitive.
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Ruban & Slogan (Side by Side) -->
                 <div class="row align-items-center mb-5">
-                    <div class="col-md-6 mb-4 mb-md-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-                        <div class="text-center">
-                            <img src="{{ asset('img/palma/o5.jpg') }}"
-                                alt="Processus de fabrication du chapeau Panama" class="img-fluid hover-effect" loading="lazy" decoding="async"
-                                style="max-width: 100%; width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
+                    <div class="col-md-6 order-2 order-md-1 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
                         <div class="section-tittle mb-30 pt-10">
                             <p class="pera responsive-text" style="color: black;">
                                 Ruban
@@ -211,6 +207,12 @@
                                 d'élégance et d'engagement pour l'artisanat équatorien.
                             </p>
                         </div>
+                    </div>
+                    <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <div class="text-center">
+                            <img src="{{ asset('img/palma/o5.jpg') }}"
+                                alt="Processus de fabrication du chapeau Panama" class="img-fluid hover-effect" loading="lazy" decoding="async"
+                                style="max-width: 100%; width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
                         </div>
                     </div>
                 </div>
@@ -242,7 +244,7 @@
 
         /* Responsive Typography */
         .responsive-title, .section-tittle h2, h1, h2 {
-        font-size: 50px !important;
+        font-size: 40px !important;
         text-align: center !important;
         font-weight: 700;
         color: black;
@@ -264,7 +266,7 @@
         }
 
         .responsive-title, .section-tittle h2, h1, h2 {
-            font-size: 30px !important;
+            font-size: 28px !important;
         }
         h3, h4 {
             font-size: 16pt !important;

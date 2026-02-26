@@ -210,7 +210,7 @@
 
     /* Responsive Typography */
     .section-tittle h2, h1, h2 {
-        font-size: 50px !important;
+        font-size: 40px !important;
         text-align: center !important;
     }
 
@@ -227,7 +227,7 @@
     /* Mobile Adaptations */
     @media (max-width: 768px) {
         .section-tittle h2, h1, h2 {
-            font-size: 30px !important;
+            font-size: 28px !important;
         }
         
         .section-tittle h3, h3, h4 {
@@ -242,20 +242,5 @@
             margin-bottom: 30px !important;
         }
     }
-    </style>
-@endsection        .pera {
-            font-size: 12pt;
-            text-align: justify;
-            line-height: 1.8;
-            color: black;
-        }
-        h2, h3, .section-tittle h2, .section-tittle h3 {
-            font-size: 50px !important;
-        }
-        @media (max-width: 768px) {
-            h2, h3, .section-tittle h2, .section-tittle h3 {
-                font-size: 30px !important;
-            }
-        }
     </style>
 @endsection

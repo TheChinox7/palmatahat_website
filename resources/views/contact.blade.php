@@ -121,7 +121,7 @@
         }
 
         .contact-title, h2, h1 {
-            font-size: 50px !important;
+            font-size: 40px !important;
             text-align: center !important;
         }
         h3, h4 {
@@ -132,7 +132,7 @@
         }
         @media (max-width: 768px) {
             .contact-title, h2, h1 {
-                font-size: 30px !important;
+                font-size: 28px !important;
             }
             h3, h4 {
                 font-size: 16pt !important;

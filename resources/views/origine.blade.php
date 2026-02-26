@@ -28,6 +28,27 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="row align-items-center mb-5">
+                    <div class="col-lg-6 mb-4 mb-lg-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <div class="text-center mb-5">
+                            <img src="{{ asset('img/palma/samira.jpeg') }}" alt="Chapeau Panama célèbre"
+                                class="img-fluid hover-effect" loading="lazy" decoding="async"
+                                style="max-width: 600px; width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-3 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <div class="section-tittle mb-30 pt-10">
+                            <h3 class="mb-3" style="font-weight: 600;">Une renommée mondiale</h3>
+                            <p class="pera responsive-text" style="color: black; font-size: 1.4rem; font-weight: 500;">
+                                C’est ainsi que le « chapeau Panama » devient mondialement célèbre… alors qu’il est né en Équateur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row align-items-center mb-5">
                     <div class="col-lg-6 mt-3 order-2 order-lg-1 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="section-tittle mb-30 pt-10">
                             <p class="pera responsive-text" style="color: black;">Le véritable chapeau Panama est fabriqué en paille Carludovica Palmata, une fibre
@@ -107,7 +128,7 @@
         }
 
         h1, .section-tittle h1, h2, .section-tittle h2 {
-        font-size: 50px !important;
+        font-size: 40px !important;
         text-align: center !important;
     }
     h3, h4, .section-tittle h3, .section-tittle h4, .responsive-subtitle {
@@ -123,13 +144,13 @@
 
     @media (max-width: 768px) {
         h1, .section-tittle h1, h2, .section-tittle h2 {
-            font-size: 30px !important;
+            font-size: 28px !important;
         }
         h3, h4, .section-tittle h3, .section-tittle h4, .responsive-subtitle {
             font-size: 16pt !important;
         }
         .responsive-title {
-            font-size: 30px !important;
+            font-size: 28px !important;
         }
 
         .responsive-text, p, .pera {

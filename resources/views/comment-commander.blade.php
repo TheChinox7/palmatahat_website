@@ -145,7 +145,7 @@
 
         /* Responsive Typography */
     .responsive-title, .responsive-subtitle, .section-tittle h2, h2, h1 {
-        font-size: 50px !important;
+        font-size: 40px !important;
         text-align: center !important;
     }
 
@@ -212,7 +212,7 @@
     /* Mobile Adaptations */
     @media (max-width: 768px) {
         .responsive-title, .responsive-subtitle, .section-tittle h2, h2, h1 {
-            font-size: 30px !important;
+            font-size: 28px !important;
         }
         .responsive-subtitle, h3, h4 {
             font-size: 16pt !important;
