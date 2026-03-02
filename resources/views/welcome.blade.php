@@ -193,7 +193,7 @@
                 <div class="popular-img">
                     <img src="{{ asset('img/palma/cats/cat5.svg') }}" alt="" loading="lazy" decoding="async">
                     <div class="img-cap">
-                        <span style="font-size:20px;">FILLES</span>
+                        <span style="font-size:20px;">ENFANTS</span>
                     </div>
                     <div class="favorit-items">
                         <a href="{{ route('shop') }}" class="btn">Acheter Maintenant</a>
